@@ -1,0 +1,105 @@
+:root {
+    --primary: #7b6b43;
+    --secondary: #de643f;
+    --success: #34c759;
+    --warning: #ffc400;
+    --error: #ff3b30;
+    --white: #fff;
+    --text: #000;
+    --text-unactive: #b6b6b9;
+    --bg-primary: #fff;
+    --bg-secondary: #fafbfc;
+    --bg-tertiary: #f2f3f5;
+    --shadow: 8px 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+/***** Start Reset CSS *****/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    word-break: break-word;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: var(--text);
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: var(--secondary) !important;
+    }
+}
+
+li {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}
+
+.main {
+    margin-top: 180px;
+}
+
+.btn {
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+    padding: 20px 20px;
+    border-radius: 4px;
+    text-align: center;
+    &.btn--primary {
+        background-color: var(--primary);
+    }
+    &.btn--red {
+        background-color: var(--error);
+    }
+    &.btn--blue {
+        background-color: #3b5998;
+    }
+    &:hover {
+        opacity: 0.8;
+        color: var(--white) !important;
+    }
+}
+
+input[type="text"], input[type="password"] {
+    border: 1px solid var(--bg-tertiary);
+    width: 100%;
+    height: 60px;
+    padding-left: 24px;
+}
+
+::placeholder {
+    font-size: 16px;
+    color: var(--text-unactive);
+    font-family: Roboto, sans-serif;
+}
