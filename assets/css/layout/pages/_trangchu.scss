@@ -1,0 +1,54 @@
+.home {
+    height: 100%;
+    .home__section {
+        .home__section--header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            h2 {
+                font-size: 28px;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+            a {
+                color: var(--secondary);
+                font-weight: 500;
+            }
+        }
+    }
+    .hero {
+        background-image: url('../image/hero.png');
+        height: calc(100vh - 96px);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        display: flex;
+        align-items: center;
+        .hero__content {
+            width: 50%;
+            .hero__content--title {
+                font-family: 'Playfair Display', serif;
+                font-size: 64px;
+                font-weight: 700;
+                color: var(--secondary);
+                text-transform: uppercase;
+            }
+            .hero__content--text {
+                max-width: 600px;
+                margin-bottom: 48px;
+            }
+            .hero__content--btn {
+                padding: 20px 60px;
+            }
+        }
+    }
+    .home__banner {
+        background-image: url(../image/banner.png);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100% 100%;
+        position: relative;
+        height: 500px;
+    }
+}

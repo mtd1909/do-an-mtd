@@ -3,6 +3,9 @@
     margin: 0 auto;
     padding: 120px 0;
     text-align: center;
+    input[type="text"], input[type="password"] {
+        height: 72px;
+    }
     .login__title {
         font-size: 48px;
         font-weight: 700;
@@ -11,6 +14,15 @@
     .login__text {
         font-size: 18px;
         margin-bottom: 60px;
+        &.limit {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &.green {
+            color: var(--success);
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
     .login__input {
         margin-top: 36px;
@@ -18,11 +30,29 @@
             margin-top: 0;
         }
     }
+    .login__list {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        .login__input {
+            margin: 0;
+            input[type="text"] {
+                width: 72px;
+                height: 72px;
+                border-color: var(--primary);
+                font-size: 28px;
+                padding-left: 18px;
+                #spin {
+                    display: none;
+                }
+            }
+        }
+    }
     .login__pass {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 36px 0;
+        margin-top: 36px;
         .login__pass--save {
             display: flex;
             align-items: center;
@@ -45,11 +75,11 @@
         }
     }
     .login__or {
-        margin-bottom: 36px;
         font-size: 18px;
     }
     .login__btn {
         display: flex;
+        margin-top: 36px;
         gap: 36px;
         .btn {
             width: 100%;

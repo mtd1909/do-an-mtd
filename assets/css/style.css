@@ -4,52 +4,61 @@
   top: 0;
   width: 100%;
   z-index: 9999;
-}
-.header .header__top {
-  height: 60px;
   background-color: var(--bg-secondary);
-  display: flex;
-  align-items: center;
-}
-.header .header__top .header__top--link {
-  display: flex;
-  justify-content: flex-end;
-  gap: 6px;
-}
-.header .header__content {
-  height: 120px;
-  background-color: var(--white);
   box-shadow: var(--shadow);
 }
-.header .header__content .header__content--wrap {
+.header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9999999;
+  animation: 0.95s ease-in-out 0s normal none 1 running fadeInDown;
+  transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  background-color: var(--white);
+}
+.header.sticky .container__fluid {
+  border: none;
+}
+.header.sticky .container__fluid .header__logo {
+  height: 80px;
+}
+.header.sticky .container__fluid .header__logo-img {
+  padding-top: 26px;
+}
+.header .header__wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 96px;
 }
-.header .header__content .header__content--wrap .menu {
+.header .header__wrap .menu {
   display: flex;
   gap: 60px;
   font-size: 18px;
 }
-.header .header__content .header__content--wrap .search {
+.header .header__wrap .search {
   position: relative;
   width: 343px;
 }
-.header .header__content .header__content--wrap .search i {
+.header .header__wrap .search i {
   position: absolute;
   right: 24px;
   top: 50%;
   transform: translateY(-50%);
   color: var(--text-unactive);
 }
-.header .header__content .header__content--wrap .user {
+.header .header__wrap .user {
   display: flex;
   gap: 36px;
 }
-.header .header__content .header__content--wrap .user .user__function {
+.header .header__wrap .user .user__function {
   position: relative;
 }
-.header .header__content .header__content--wrap .user .user__function:before {
+.header .header__wrap .user .user__function:not(:first-child):before {
   content: "0";
   width: 16px;
   height: 16px;
@@ -62,8 +71,9 @@
   position: absolute;
   right: -2px;
   top: 2px;
+  font-size: 13px;
 }
-.header .header__content .header__content--wrap .user .user__function i {
+.header .header__wrap .user .user__function i {
   font-size: 24px;
 }
 
@@ -135,6 +145,9 @@
   padding: 120px 0;
   text-align: center;
 }
+.login input[type=text], .login input[type=password] {
+  height: 72px;
+}
 .login .login__title {
   font-size: 48px;
   font-weight: 700;
@@ -144,17 +157,44 @@
   font-size: 18px;
   margin-bottom: 60px;
 }
+.login .login__text.limit {
+  margin-left: auto;
+  margin-right: auto;
+}
+.login .login__text.green {
+  color: var(--success);
+  margin-left: auto;
+  margin-right: auto;
+}
 .login .login__input {
   margin-top: 36px;
 }
 .login .login__input:first-child {
   margin-top: 0;
 }
+.login .login__list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.login .login__list .login__input {
+  margin: 0;
+}
+.login .login__list .login__input input[type=text] {
+  width: 72px;
+  height: 72px;
+  border-color: var(--primary);
+  font-size: 28px;
+  padding-left: 18px;
+}
+.login .login__list .login__input input[type=text] #spin {
+  display: none;
+}
 .login .login__pass {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 36px 0;
+  margin-top: 36px;
 }
 .login .login__pass .login__pass--save {
   display: flex;
@@ -177,15 +217,68 @@
   color: var(--primary);
 }
 .login .login__or {
-  margin-bottom: 36px;
   font-size: 18px;
 }
 .login .login__btn {
   display: flex;
+  margin-top: 36px;
   gap: 36px;
 }
 .login .login__btn .btn {
   width: 100%;
+}
+
+.home {
+  height: 100%;
+}
+.home .home__section .home__section--header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.home .home__section .home__section--header h2 {
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.home .home__section .home__section--header a {
+  color: var(--secondary);
+  font-weight: 500;
+}
+.home .hero {
+  background-image: url("../image/hero.png");
+  height: calc(100vh - 96px);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+}
+.home .hero .hero__content {
+  width: 50%;
+}
+.home .hero .hero__content .hero__content--title {
+  font-family: "Playfair Display", serif;
+  font-size: 64px;
+  font-weight: 700;
+  color: var(--secondary);
+  text-transform: uppercase;
+}
+.home .hero .hero__content .hero__content--text {
+  max-width: 600px;
+  margin-bottom: 48px;
+}
+.home .hero .hero__content .hero__content--btn {
+  padding: 20px 60px;
+}
+.home .home__banner {
+  background-image: url(../image/banner.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  position: relative;
+  height: 500px;
 }
 
 :root {
@@ -196,7 +289,7 @@
   --error: #ff3b30;
   --white: #fff;
   --text: #000;
-  --text-unactive: #b6b6b9;
+  --text-unactive: #b5b6b9;
   --bg-primary: #fff;
   --bg-secondary: #fafbfc;
   --bg-tertiary: #f2f3f5;
@@ -233,7 +326,7 @@ a {
   font-weight: 500;
   transition: all 0.3s ease;
 }
-a:hover {
+a.link:hover {
   color: var(--secondary) !important;
 }
 
@@ -249,19 +342,22 @@ img {
   overflow: hidden;
 }
 
-.mb30 {
-  margin-bottom: 30px;
+.pt-120 {
+  padding-top: 120px;
+}
+
+.pb-120 {
+  padding-bottom: 120px;
 }
 
 .main {
-  margin-top: 180px;
+  margin-top: 96px;
 }
 
 .btn {
   color: var(--white);
   font-size: 18px;
   font-weight: 500;
-  display: block;
   padding: 20px 20px;
   border-radius: 4px;
   text-align: center;
@@ -269,15 +365,26 @@ img {
 .btn.btn--primary {
   background-color: var(--primary);
 }
+.btn.btn--primary:hover {
+  color: var(--white);
+}
 .btn.btn--red {
   background-color: var(--error);
+}
+.btn.btn--red:hover {
+  color: var(--white);
 }
 .btn.btn--blue {
   background-color: #3b5998;
 }
+.btn.btn--blue:hover {
+  color: var(--white);
+}
+.btn.btn--full {
+  display: block;
+}
 .btn:hover {
   opacity: 0.8;
-  color: var(--white) !important;
 }
 
 input[type=text], input[type=password] {
@@ -299,6 +406,86 @@ input[type=text], input[type=password] {
   font-family: Roboto, sans-serif;
 }
 
+.list__products {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.list__products .product {
+  width: calc((100% - 90px) / 4);
+}
+.list__products .product .product__img {
+  position: relative;
+}
+.list__products .product .product__img .product__img--sale {
+  position: absolute;
+  background-color: var(--secondary);
+  color: var(--white);
+  right: 0;
+  top: 24px;
+  padding: 8px 36px;
+}
+.list__products .product .product__name {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+.list__products .product .product__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.list__products .product .product__info:last-child {
+  margin-top: 10px;
+}
+.list__products .product .product__info .product__info--price {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.list__products .product .product__info .product__info--price .price__new {
+  color: var(--primary);
+  font-size: 18px;
+  font-weight: 500;
+}
+.list__products .product .product__info .product__info--price .price__old {
+  color: var(--text-unactive);
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: line-through;
+}
+.list__products .product .product__info .product__info--icon {
+  cursor: pointer;
+}
+.list__products .product .product__info .product__info--icon i {
+  font-size: 20px;
+}
+.list__products .product .product__info .product__info--rate {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.list__products .product .product__info .product__info--rate i {
+  color: var(--secondary);
+}
+.list__products .product .product__info .product__info--rate .rate__times {
+  font-weight: 500;
+  color: var(--text-unactive);
+}
+.list__products .product .product__info .product__info--sold {
+  color: var(--text-unactive);
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
 /* Start Grid */
 .container {
   width: 100%;
