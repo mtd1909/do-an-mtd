@@ -1,5 +1,5 @@
 .footer {
-    background-color: var(--primary);
+    background-color: var(--brand-500);
     padding: 36px 0;
     color: var(--white);
     .footer__wrap {
@@ -32,7 +32,7 @@
                 .footer__social--item {
                     width: 48px;
                     height: 48px;
-                    border-radius: 50%;
+                    border-radius: 6px;
                     background-color: var(--white);
                     display: flex;
                     justify-content: center;

@@ -1,0 +1,21 @@
+.breadcrumb {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--neutral-50);
+    .breadcrumb__link {
+        display: flex;
+        gap: 6px;
+        color: var(--neutral-500);
+        font-weight: 500;
+        font-size: 16px;
+        a {
+            color: var(--neutral-500);
+            transition: all 0.3s ease; 
+            &:hover {
+                color: #7b6b43;
+            }
+        }
+    }
+}

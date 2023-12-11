@@ -18,10 +18,8 @@
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         margin: 0 auto;
         background-color: var(--white);
-
         .container__fluid {
             border: none;
-
             .header__logo {
                 height: 80px;
             }
@@ -36,23 +34,26 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 96px;
+        height: 80px;
         .menu {
             display: flex;
             gap: 60px;
-            font-size: 18px;
+            font-size: 16px;
         }
-
+        input[type="text"], input[type="password"] {
+            height: 48px;
+            outline: none;
+            border-radius: 6px;
+        }
         .search {
             position: relative;
             width: 343px;
-
             i {
                 position: absolute;
                 right: 24px;
                 top: 50%;
                 transform: translateY(-50%);
-                color: var(--text-unactive);
+                color: var(--text-inactive);
             }
         }
 
