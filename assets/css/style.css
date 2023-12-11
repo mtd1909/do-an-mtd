@@ -144,8 +144,7 @@
   width: 50%;
 }
 .home .hero .hero__content .hero__content--title {
-  font-family: "Playfair Display", serif;
-  font-size: 64px;
+  font-size: 60px;
   font-weight: 700;
   color: var(--brand-600);
   text-transform: uppercase;
@@ -541,19 +540,19 @@ input[type=text], input[type=password] {
 
 input, select {
   outline: none;
-  font-family: "Roboto", sans-serif;
+  font-family: "SVN-Gotham Rounded";
 }
 
 ::-moz-placeholder {
   font-size: 16px;
   color: var(--text-inactive);
-  font-family: Roboto, sans-serif;
+  font-family: "SVN-Gotham Rounded";
 }
 
 ::placeholder {
   font-size: 16px;
   color: var(--text-inactive);
-  font-family: Roboto, sans-serif;
+  font-family: "SVN-Gotham Rounded";
 }
 
 .list__cards {
@@ -565,10 +564,10 @@ input, select {
   width: calc((100% - 90px) / 4);
   border-radius: 4px;
 }
-.list__cards .card:hover .card__bg .card__name {
+.list__cards .card:hover .card__name {
   color: var(--secondary);
 }
-.list__cards .card.feedback:hover .card__bg .card__name {
+.list__cards .card.feedback:hover .card__name {
   color: var(--text);
 }
 .list__cards .card.feedback .card__bg {

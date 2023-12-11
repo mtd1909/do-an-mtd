@@ -169,13 +169,13 @@ input[type="text"], input[type="password"] {
 
 input, select {
     outline: none;
-    font-family: "Roboto", sans-serif;
+    font-family: "SVN-Gotham Rounded";
 }
 
 ::placeholder {
     font-size: 16px;
     color: var(--text-inactive);
-    font-family: Roboto, sans-serif;
+    font-family: "SVN-Gotham Rounded";
 }
 
 .list__cards {
@@ -186,18 +186,14 @@ input, select {
         width: calc((100% - 90px) / 4);
         border-radius: 4px;
         &:hover {
-            .card__bg {
-                .card__name {
-                    color: var(--secondary);
-                }
+            .card__name {
+                color: var(--secondary);
             }
         }
         &.feedback {
             &:hover {
-                .card__bg {
-                    .card__name {
-                        color: var(--text);
-                    }
+                .card__name {
+                    color: var(--text);
                 }
             }
             .card__bg {
