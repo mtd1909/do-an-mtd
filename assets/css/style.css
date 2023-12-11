@@ -409,29 +409,29 @@
 }
 
 @font-face {
-  font-family: "SVN-Gotham-Rounded";
-  src: url("/font/SVN-Gotham-Rounded-Bold.ttf");
+  font-family: "SVN-Gotham Rounded";
+  src: url("/fonts/SVN-Gotham-Rounded-Bold.ttf");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "SVN-Gotham-Rounded";
-  src: url("/font/SVN-Gotham-Rounded-Light.ttf");
+  font-family: "SVN-Gotham Rounded";
+  src: url("/fonts/SVN-Gotham-Rounded-Light.ttf");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "SVN-Gotham-Rounded";
-  src: url("/font/SVN-Gotham-Rounded-Medium.ttf");
+  font-family: "SVN-Gotham Rounded";
+  src: url("/fonts/SVN-Gotham-Rounded-Medium.ttf");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "SVN-Gotham-Rounded";
-  src: url("/font/SVN-Gotham-Rounded-Regular.ttf");
+  font-family: "SVN-Gotham Rounded";
+  src: url("/fonts/SVN-Gotham-Rounded-Regular.ttf");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -445,7 +445,7 @@
 }
 
 body {
-  font-family: "SVN-Gotham-Rounded";
+  font-family: "SVN-Gotham Rounded";
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
@@ -540,19 +540,19 @@ input[type=text], input[type=password] {
 
 input, select {
   outline: none;
-  font-family: "SVN-Gotham-Rounded";
+  font-family: "SVN-Gotham Rounded";
 }
 
 ::-moz-placeholder {
   font-size: 16px;
   color: var(--text-inactive);
-  font-family: "SVN-Gotham-Rounded";
+  font-family: "SVN-Gotham Rounded";
 }
 
 ::placeholder {
   font-size: 16px;
   color: var(--text-inactive);
-  font-family: "SVN-Gotham-Rounded";
+  font-family: "SVN-Gotham Rounded";
 }
 
 .list__cards {
