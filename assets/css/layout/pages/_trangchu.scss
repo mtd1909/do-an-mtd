@@ -45,6 +45,9 @@
                 width: 360px;
                 .support__form {
                     margin-bottom: 16px;
+                    input {
+                        height: 48px;
+                    }
                 }
             }
         }

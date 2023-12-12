@@ -158,10 +158,10 @@ img {
     }
 }
 
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], input[type="number"] {
     border: 1px solid var(--bg-tertiary);
     width: 100%;
-    height: 60px;
+    height: 48px;
     padding-left: 24px;
     border-radius: 4px;
     font-size: 16px;
@@ -184,7 +184,7 @@ input, select {
     flex-wrap: wrap;
     .card {
         width: calc((100% - 90px) / 4);
-        border-radius: 4px;
+        border-radius: 6px;
         &:hover {
             .card__name {
                 color: var(--secondary);
@@ -199,8 +199,10 @@ input, select {
             .card__bg {
                 border: 1px solid var(--neutral-100);
                 border-top: transparent;
+                border-radius: 0 0 6px 6px;
             }
             .card__img {
+                border-radius: 6px 6px 0 0;
                 img {
                     &:hover {
                         transform: scale(1);
@@ -209,16 +211,11 @@ input, select {
             }
         }
         .card__bg {
-            // background-color: var(--bg-secondary);
-            padding: 24px;
-            margin-top: -7px;
+            padding: 16px;
             &.card__bg--blog {
                 padding: 0;
                 padding-top: 16px;
                 margin-top: 0;
-                .card__name {
-                    margin-top: -10px;
-                }
                 .card__info {
                     display: flex;
                     gap: 6px;
@@ -226,7 +223,7 @@ input, select {
                 }
             }
             .card__info {
-                margin-bottom: 16px;
+                margin-bottom: 10px;
                 .card__blog--circle {
                     width: 4px;
                     height: 4px;
@@ -247,7 +244,10 @@ input, select {
             position: relative;
             line-height: 0;
             overflow: hidden;
-            border-radius: 4px;
+            border-radius: 6px;
+            width: 330px;
+            height: 330px;
+            display: block;
             .card__img--sale {
                 position: absolute;
                 background-color: var(--secondary);
@@ -259,6 +259,9 @@ input, select {
                 border-radius: 2px;
             }
             img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
                 transition: all 0.3s ease;
                 &:hover {
                     transform: scale(1.05);
@@ -277,13 +280,14 @@ input, select {
             margin: 10px 0;
             font-size: 18px;
             font-weight: 500;
+            display: block;
             &.title {
                 font-size: 20px;
                 margin: 0;
             }
         }
         .card__view {
-            margin-top: 16px;
+            margin-top: 10px;
             font-size: 12px;
             font-weight: 500;
             color: var(--neutral-500);
@@ -330,6 +334,7 @@ input, select {
             }
             .card__info--icon {
                 cursor: pointer;
+                height: 27px;
                 i {
                     font-size: 20px;
                 }
@@ -361,7 +366,7 @@ input, select {
         .card__time {
             font-size: 14px;
             color: var(--neutral-500);
-            margin-top: 12px;
+            margin-top: 10px;
             font-weight: 500;
             display: flex;
             justify-content: flex-start;
@@ -375,8 +380,14 @@ input, select {
         }
     }
 }
-.mt-12 {
-    margin-top: 12px;
+.mt-10 {
+    margin-top: 10px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 @keyframes fadeInDown {

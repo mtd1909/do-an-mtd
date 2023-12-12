@@ -14,8 +14,12 @@
             color: var(--neutral-500);
             transition: all 0.3s ease; 
             &:hover {
-                color: #7b6b43;
+                color: var(--secondary);
             }
         }
+        p {
+            color: var(--secondary);
+        }
+        
     }
 }
