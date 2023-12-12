@@ -39,6 +39,11 @@
             display: flex;
             gap: 60px;
             font-size: 16px;
+            .link {
+                &.active {
+                    color: var(--secondary);
+                }
+            }
         }
         input[type="text"], input[type="password"] {
             height: 48px;
@@ -63,24 +68,28 @@
 
             .user__function {
                 position: relative;
-
-                &:not(:first-child) {
-                    &:before {
-                        content: '0';
-                        width: 16px;
-                        height: 16px;
-                        background-color: var(--error);
-                        border-radius: 50%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        color: var(--white);
-                        position: absolute;
-                        right: -2px;
-                        top: 2px;
-                        font-size: 13px;
-                    }
-                }
+                width: 48px;
+                height: 48px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                // &:not(:first-child) {
+                //     &:before {
+                //         content: '0';
+                //         width: 16px;
+                //         height: 16px;
+                //         background-color: var(--error);
+                //         border-radius: 50%;
+                //         display: flex;
+                //         justify-content: center;
+                //         align-items: center;
+                //         color: var(--white);
+                //         position: absolute;
+                //         right: 8px;
+                //         top: 8px;
+                //         font-size: 13px;
+                //     }
+                // }
 
                 i {
                     font-size: 24px;

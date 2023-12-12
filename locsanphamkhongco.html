@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng ký OPT</title>
+    <title>Tất cả sản phẩm</title>
     <link rel="stylesheet"
         href="https://redpervn.github.io/fa/css/all.min.css?fbclid=IwAR2VnCVu3fZyZybhEPHqAoRF9xJd2ZJZ43gCLfQokvfv6X5YJv1_V3HNSyw">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -19,8 +19,8 @@
                         <img src="assets/image/logo.svg" alt="logo image">
                     </a>
                     <ul class="menu">
-                        <li><a class="link" href="#">Trang chủ</a></li>
-                        <li><a class="link" href="#">Sản phẩm</a></li>
+                        <li><a class="link" href="index.html">Trang chủ</a></li>
+                        <li><a class="link active" href="tatcasanpham.html">Sản phẩm</a></li>
                         <li><a class="link" href="#">Về chúng tôi</a></li>
                         <li><a class="link" href="#">Blog</a></li>
                     </ul>
@@ -43,39 +43,52 @@
             </div>
         </header>
         <div class="main">
-            <div class="login">
+            <div class="breadcrumb">
                 <div class="container">
-                    <h1 class="login__title">Tạo tài khoản</h1>
-                    <p class="login__text limit"">Nhập mã xác thực để xác nhận số điện thoại
-                        chính chủ dùng cho tài khoản Nội Thất Hoàng Gia</p>
-                    <form action="#">
-                        <div class="login__list">
-                            <div class="login__input">
-                                <input type="number" maxlength="1" oninput="validateInput(event)">
-                            </div>
-                            <div class="login__input">
-                                <input type="number" maxlength="1" oninput="validateInput(event)">
-                            </div>
-                            <div class="login__input">
-                                <input type="number" maxlength="1" oninput="validateInput(event)">
-                            </div>
-                            <div class="login__input">
-                                <input type="number" maxlength="1" oninput="validateInput(event)">
-                            </div>
-                            <div class="login__input">
-                                <input type="number" maxlength="1" oninput="validateInput(event)">
-                            </div>
-                            <div class="login__input">
-                                <input type="number" maxlength="1" oninput="validateInput(event)">
-                            </div>
-                        </div>
-                        <div class="login__btn">
-                            <a href="dangkymatkhau.html" class="btn btn--primary">Xác thực mã OTP</a>
-                        </div>
-                    </form>
-                    <div class="login__signup">
-                        Bạn đã có tài khoản? <a href="dangnhap.html">Đăng nhập</a>
+                    <div class="breadcrumb__link">
+                        <a href="index.html">Trang chủ</a>
+                        <span>/</span>
+                        <p>Tất cả sản phẩm</p>
                     </div>
+                </div>
+            </div>
+            <div class="products-page">
+                <div class="container">
+                    <div class="products-page--header">
+                        <h2 class="header--title">Tất cả các sản phẩm</h2>
+                        <select name="select-header" id="" class="header--select">
+                            <option value="">Bán chạy nhất</option>
+                            <option value="">Mới nhất</option>
+                        </select>
+                    </div>
+                    <div class="products-page--filter">
+                        <select name="select-filter" id="mySelect" onchange="redirectToLink()" class="filter--select">
+                            <option value="tatcasanpham.html">Danh mục</option>
+                            <option value="locsanpham.html">Đồ Phòng Bếp, Bộ Bàn Ăn</option>
+                            <option value="">Tủ quần áo</option>
+                            <option value="">Giường Ngủ</option>
+                        </select>
+                        <select name="select-filter" id="mySelect2" onchange="redirectToLink()" class="filter--select">
+                            <option value="tatcasanpham.html">Giá sản phẩm</option>
+                            <option selected value="locsanphamkhongco.html">0 - 500.000 vnđ</option>
+                            <option value="">500.000đ - 1.000.000 vnđ</option>
+                            <option value="">1.000.000đ - 2.000.000 vnđ</option>
+                        </select>
+                        <select name="select-filter" id="" class="filter--select">
+                            <option value="">Màu sắc</option>
+                            <option value="">Xanh</option>
+                            <option value="">Đỏ</option>
+                            <option value="">Tím</option>
+                            <option value="">Vàng</option>
+                        </select>
+                        <select name="select-filter" id="" class="filter--select">
+                            <option value="">Kích thước</option>
+                            <option value="">Kích thước 1</option>
+                            <option value="">Kích thước 2</option>
+                            <option value="">Kích thước 3</option>
+                        </select>
+                    </div>
+                    <div class="products-page--empty">Không tìm thấy sản phẩm nào phù hợp</div>
                 </div>
             </div>
         </div>
@@ -138,19 +151,14 @@
         </footer>
     </div>
     <script>
-        function validateInput(event) {
-            // Get the entered value
-            let inputValue = event.target.value;
-
-            // Validate if it is a number
-            if (!isNaN(inputValue)) {
-                // Limit the length to 1 digit
-                if (inputValue.length > 1) {
-                    event.target.value = inputValue.slice(0, 1);
-                }
-            } else {
-                // Clear the input if it's not a number
-                event.target.value = "";
+        function redirectToLink() {
+            let selectedValue = document.getElementById("mySelect").value;
+            let selectedValue2 = document.getElementById("mySelect2").value;
+            if (selectedValue) {
+                window.location.href = selectedValue;
+            }
+            if (selectedValue2) {
+                window.location.href = selectedValue2;
             }
         }
     </script>

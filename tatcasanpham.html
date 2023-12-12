@@ -20,7 +20,7 @@
                     </a>
                     <ul class="menu">
                         <li><a class="link" href="index.html">Trang chủ</a></li>
-                        <li><a class="link" href="tatcasanpham.html">Sản phẩm</a></li>
+                        <li><a class="link active" href="tatcasanpham.html">Sản phẩm</a></li>
                         <li><a class="link" href="#">Về chúng tôi</a></li>
                         <li><a class="link" href="#">Blog</a></li>
                     </ul>
@@ -29,15 +29,15 @@
                         <i class="fa-regular fa-magnifying-glass"></i>
                     </div>
                     <div class="user">
-                        <div class="user__function">
-                            <i class="fa-regular fa-user"></i>
-                        </div>
                         <a href="#" class="user__function link">
                             <i class="fa-regular fa-cart-shopping"></i>
                         </a>
                         <a href="#" class="user__function link">
                             <i class="fa-regular fa-heart"></i>
                         </a>
+                        <div class="user__function">
+                            <i class="fa-regular fa-user"></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -62,15 +62,15 @@
                         </select>
                     </div>
                     <div class="products-page--filter">
-                        <select name="select-filter" id="" class="filter--select">
+                        <select name="select-filter" id="mySelect" onchange="redirectToLink()" class="filter--select">
                             <option value="">Danh mục</option>
-                            <option value="">Danh mục 1</option>
-                            <option value="">Danh mục 2</option>
-                            <option value="">Danh mục 3</option>
+                            <option value="locsanpham.html">Đồ Phòng Bếp, Bộ Bàn Ăn</option>
+                            <option value="">Tủ quần áo</option>
+                            <option value="">Giường Ngủ</option>
                         </select>
-                        <select name="select-filter" id="" class="filter--select">
+                        <select name="select-filter" id="mySelect2" onchange="redirectToLink()" class="filter--select">
                             <option value="">Giá sản phẩm</option>
-                            <option value="">0 - 500.000 vnđ</option>
+                            <option value="locsanphamkhongco.html">0 - 500.000 vnđ</option>
                             <option value="">500.000 - 1.000.000 vnđ</option>
                             <option value="">1.000.000 - 2.000.000 vnđ</option>
                         </select>
@@ -130,7 +130,7 @@
                                 </div>
                             </a>
                             <a href="#" class="card__name">
-                                Ghế Ăn Gỗ Óc Chó Tự Nhiên 
+                                Ghế Ăn Gỗ Óc Chó Tự Nhiên
                             </a>
                             <div class="card__info">
                                 <div class="card__info--price">
@@ -679,7 +679,18 @@
             </div>
         </footer>
     </div>
-    <script src="js/script.js"></script>
+    <script>
+        function redirectToLink() {
+            let selectedValue = document.getElementById("mySelect").value;
+            let selectedValue2 = document.getElementById("mySelect2").value;
+            if (selectedValue) {
+                window.location.href = selectedValue;
+            }
+            if (selectedValue2) {
+                window.location.href = selectedValue2;
+            }
+        }
+    </script>
 </body>
 
 </html>
