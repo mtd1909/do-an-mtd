@@ -51,13 +51,19 @@
                     }
                 }
                 .rate--buy {
-                    color: var(--neutral-500);
+                    color: var(--text);
                     font-size: 16px;
                 }
             }
             .info--key {
-                color: var(--neutral-500);
+                color: var(--text);
                 font-size: 16px;
+                font-weight: 500;
+                margin-bottom: 16px;
+                span {
+                    font-weight: 400;
+                    font-size: 14px;
+                }
             }
             .info--line {
                 margin: 30px 0;
