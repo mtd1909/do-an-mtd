@@ -36,6 +36,7 @@
                     font-size: 48px;
                     font-weight: 600;
                     margin-bottom: 16px;
+                    color: var(--brand-500);
                 }
                 p {
                     font-size: 18px;
@@ -62,16 +63,12 @@
         .hero__content {
             width: 50%;
             .hero__content--title {
-                // font-family: 'Playfair Display', serif;
-                font-size: 60px;
-                font-weight: 700;
-                color: var(--brand-500);
-                text-transform: uppercase;
+                margin-bottom: 36px;
             }
             .hero__content--text {
                 max-width: 600px;
                 margin-bottom: 48px;
-                color: var(--neutral-600);
+                color: var(--text);
             }
             .hero__content--btn {
                 background: var(--brand-500);
