@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán</title>
+    <link rel="stylesheet"
+        href="https://redpervn.github.io/fa/css/all.min.css?fbclid=IwAR2VnCVu3fZyZybhEPHqAoRF9xJd2ZJZ43gCLfQokvfv6X5YJv1_V3HNSyw">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__wrap">
+                    <a href="trangchu-dadangnhap.html" class="logo">
+                        <img src="assets/image/logo.svg" alt="logo image">
+                    </a>
+                    <ul class="menu">
+                        <li><a class="link active" href="index.html">Trang chủ</a></li>
+                        <li><a class="link" href="tatcasanpham.html">Sản phẩm</a></li>
+                        <li><a class="link" href="vechungtoi.html">Về chúng tôi</a></li>
+                        <li><a class="link" href="blog.html">Blog</a></li>
+                    </ul>
+                    <div class="search">
+                        <input type="text" placeholder="Tìm kiếm...">
+                        <i class="fa-regular fa-magnifying-glass"></i>
+                    </div>
+                    <div class="user">
+                        <a href="giohang.html" class="user__function link">
+                            <i class="fa-regular fa-cart-shopping"></i>
+                        </a>
+                        <a href="#" class="user__function link">
+                            <i class="fa-regular fa-heart"></i>
+                        </a>
+                        <div class="user__function function">
+                            <div class="user__info">
+                                <img src="./assets/image/avatar-header.png" alt="avatar">
+                                <div class="user__info--name">Đạt Mai</div>
+                            </div>
+                            <div class="popup-user">
+                                <a href="taikhoan-khongcothongtin.html " class="popup-user__item">
+                                    <i class="fa-regular fa-user"></i>
+                                    <p>Thông tin cá nhân</p>
+                                </a>
+                                <a href="lichsumuahang.html" class="popup-user__item">
+                                    <i class="fa-regular fa-cart-shopping"></i>
+                                    <p class="ml-2">Lịch sử mua hàng</p>
+                                </a>
+                                <a href="/" class="popup-user__item logout">
+                                    <i class="fa-regular fa-right-from-bracket"></i>
+                                    <p>Đăng xuất</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="main">
+            <div class="payment">
+                <div class="container">
+                    <div class="payment__title">
+                        Thanh toán
+                    </div>
+                    <div class="payment__content">
+                        <div class="payment__content--left">
+                            <div class="payment-box">
+                                <h3 class="payment__subtitle">
+                                    Thông tin giao hàng
+                                </h3>
+                                <input type="text" placeholder="Họ và tên" class="payment__input">
+                                <div class="payment__wrap-input">
+                                    <input type="text" placeholder="Email" class="payment__input">
+                                    <input type="text" placeholder="Số điện thoại" class="payment__input">
+                                </div>
+                                <div class="payment__wrap-input">
+                                    <select name="city" id="city" class="check-option" onchange="checkSelect(1)">
+                                        <option hidden>Tỉnh / Thành phố</option>
+                                        <option>Hà Nội</option>
+                                        <option>Đà Nẵng</option>
+                                        <option>Thành phố Hồ Chí Minh</option>
+                                    </select>
+                                    <select name="district" id="district" class="check-option" onchange="checkSelect(2)">
+                                        <option hidden>Quận / Huyện</option>
+                                        <option>Quận Thanh Xuân</option>
+                                        <option>Quận Đống Đa</option>
+                                        <option>Quận Cầu Giấy</option>
+                                    </select>
+                                    <select name="ward" id="ward" class="check-option" onchange="checkSelect(3)">
+                                        <option hidden>Phường / Xã</option>
+                                        <option>Phường Khương Trung</option>
+                                        <option>Phường Khương Đình</option>
+                                        <option>Phường Khương Thượng</option>
+                                    </select>
+                                </div>
+                                <input type="text" placeholder="Địa chỉ cụ thể" class="payment__input">
+                            </div>
+                            <div class="payment-box">
+                                <h3 class="payment__subtitle">
+                                    Phương thức vận chuyển
+                                </h3>
+                                <div class="payment__deliver">
+                                    <div class="payment__deliver--info">
+                                        <div class="">
+                                            <div class="info--title">Đơn vị vận chuyển Panda Express</div>
+                                            <div class="info--desc">Nhận hàng vào 16 Th08 - 19 Th08</div>
+                                        </div>
+                                        <div class="info--price">28.800đ</div>
+                                    </div>
+                                    <div class="payment__deliver--btn" onclick="changeDeliver()">Thay đổi</div>
+                                </div>
+                            </div>
+                            <div class="payment-box">
+                                <h3 class="payment__subtitle">
+                                    Phương thức thanh toán
+                                </h3>
+                                <div class="payment__method active">
+                                    <div class="payment__method--dot"></div>
+                                    <div class="payment__method--content">
+                                        <div class="content__title">Thanh toán khi nhận hàng</div>
+                                        <div class="content__subtitle">Thanh toán trực tiếp với nhân viên giao hàng khi nhận hàng</div>
+                                    </div>
+                                </div>
+                                <div class="payment__method">
+                                    <div class="payment__method--dot"></div>
+                                    <div class="payment__method--content">
+                                        <div class="content__title">Thanh toán bằng ngân hàng điện tử</div>
+                                        <div class="content__subtitle">Hỗ trợ các ngân hàng: Vietcombank, VPBank, MB Bank,...</div>
+                                    </div>
+                                </div>
+                                <div class="payment__method">
+                                    <div class="payment__method--dot"></div>
+                                    <div class="payment__method--content">
+                                        <div class="content__title">Thanh toán bằng ví điện tử</div>
+                                        <div class="content__subtitle">Hỗ trợ các ví điện tử: Momo, ZaloPay, ...</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="payment__button">
+                                <a href="giohang.html" class="btn btn-rounded">Quay lại giỏ hàng</a>
+                                <div onclick="showSuccess()" class="btn btn-primary">Hoàn tất đơn hàng</div>
+                            </div>
+                        </div>
+                        <div class="payment__content--right">
+                            <h3 class="payment__subtitle">
+                                Thông tin đơn hàng 
+                            </h3>
+                            <div class="cart__products--order">
+                                <div class="order__left">
+                                    <div class="order__left--img">
+                                        <img src="assets/image/ghe-an-cao-su.jpg" alt="san pham">
+                                    </div>
+                                    <div class="order__left--content">
+                                        <div class="content__title">
+                                            Ghế ăn gỗ cao su tự nhiên
+                                        </div>
+                                        <div class="content__desc">MÀU TỰ NHIÊN</div>
+                                        <div class="content__info">
+                                            <div class="content__info--quantity">1</div>
+                                            <div class="content__info--price">
+                                                <div class="price__new">
+                                                    999.000đ
+                                                </div>
+                                                <div class="price__old">
+                                                    1.999.000
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order__right">
+                                    <i class="fa-regular fa-xmark"></i>
+                                </div>
+                            </div>
+                            <div class="cart__products--order">
+                                <div class="order__left">
+                                    <div class="order__left--img">
+                                        <img src="assets/image/ghe-an-cao-su.jpg" alt="san pham">
+                                    </div>
+                                    <div class="order__left--content">
+                                        <div class="content__title">
+                                            Ghế ăn gỗ cao su tự nhiên
+                                        </div>
+                                        <div class="content__desc">MÀU TỰ NHIÊN</div>
+                                        <div class="content__info">
+                                            <div class="content__info--quantity">1</div>
+                                            <div class="content__info--price">
+                                                <div class="price__new">
+                                                    999.000đ
+                                                </div>
+                                                <div class="price__old">
+                                                    1.999.000
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order__right">
+                                    <i class="fa-regular fa-xmark"></i>
+                                </div>
+                            </div>
+                            <div class="payment__discount">
+                                <input type="text" placeholder="Mã giảm giá">
+                                <div class="btn btn-inactive">Áp dụng</div>
+                            </div>
+                            <div class="payment__discount-wrap">
+                                <div onclick="showPopupDiscount()" class="payment__discount-detail">
+                                    <img src="./assets/image/badge-percent.svg" alt="icon">
+                                    <div class="detail__text">Xem thêm mã giảm giá</div>
+                                </div>
+                                <div class="discount__tag">
+                                    <img src="./assets/image/tag.svg" alt="icon">
+                                    <div class="discount__tag--title">NTHG100K</div>
+                                    <a href="thanhtoan.html"><i class="fa-regular fa-xmark"></i></a>
+                                </div>
+                            </div>
+                            <div class="payment__user">
+                                <div class="payment__user--avatar">
+                                    <img src="./assets/image/avatar.png" alt="avatar">
+                                </div>
+                                <div class="payment__user--info">
+                                    <div class="info__name">Mai Thành Đạt</div>
+                                    <div class="info__desc">Silver’s Membership<span></span>0 điểm thưởng</div>
+                                </div>
+                            </div>
+                            <div class="payment__cash">
+                                <div class="payment__cash--title">Tạm tính</div>
+                                <div class="payment__cash--price">1.998.000đ</div>
+                            </div>
+                            <div class="payment__cash">
+                                <div class="payment__cash--title">Mã giảm giá</div>
+                                <div class="payment__cash--price">-100.000đ</div>
+                            </div>
+                            <div class="payment__cash">
+                                <div class="payment__cash--title">Phí vận chuyển</div>
+                                <div class="payment__cash--price">28.800đ</div>
+                            </div>
+                            <div class="payment__total">
+                                <div class="payment__total--title">Tổng cộng</div>
+                                <div class="payment__total--price">1.926.800đ</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="overlay__deliver">
+            <div class="overlay" onclick="hideOverlay()"></div>
+            <div class="overlay__deliver--content">
+                <div class="content__title">Chọn đơn vị vận chuyển<i onclick="hideOverlay()" class="fa-regular fa-xmark"></i></div>
+                <div class="content__select">
+                    <img src="./assets/image/deliver.svg" alt="icon">
+                    <div class="content__select--info">
+                        <div class="info__title">Panda Express</div>
+                        <div class="info__list">
+                            <div class="info__list--item">Nhận hàng vào 16/8 - 19/8</div>
+                            <div class="info__list--item">Mua tối thiểu 100.000đ</div>
+                        </div>
+                    </div>
+                    <div class="content__select--price">28.800đ</div>
+                    <div class="content__select--button">Áp dụng</div>
+                </div>
+                <div class="content__select">
+                    <img src="./assets/image/deliver.svg" alt="icon">
+                    <div class="content__select--info">
+                        <div class="info__title">Best Express</div>
+                        <div class="info__list">
+                            <div class="info__list--item">Nhận hàng vào 16/8 - 19/8</div>
+                            <div class="info__list--item">Mua tối thiểu 100.000đ</div>
+                        </div>
+                    </div>
+                    <div class="content__select--price">28.800đ</div>
+                    <div class="content__select--button">Áp dụng</div>
+                </div>
+                <div class="content__select">
+                    <img src="./assets/image/deliver.svg" alt="icon">
+                    <div class="content__select--info">
+                        <div class="info__title">Giao hàng tiết kiệm</div>
+                        <div class="info__list">
+                            <div class="info__list--item">Nhận hàng vào 16/8 - 19/8</div>
+                            <div class="info__list--item">Mua tối thiểu 100.000đ</div>
+                        </div>
+                    </div>
+                    <div class="content__select--price">28.800đ</div>
+                    <div class="content__select--button">Áp dụng</div>
+                </div>
+            </div>
+        </div>
+        <div class="overlay__discount">
+            <div onclick="hideOverlay()" class="overlay"></div>
+            <div class="overlay__deliver--content">
+                <div class="content__title">Chọn giảm giá<i onclick="hideOverlay()" class="fa-regular fa-xmark"></i></div>
+                <div class="content__select">
+                    <img src="./assets/image/discount.svg" alt="icon">
+                    <div class="content__select--info">
+                        <div class="info__title">NTHG50K</div>
+                        <div class="info__list">
+                            <div class="info__list--item">Giảm 50.000đ giá trị đơn hàng</div>
+                            <div class="info__list--item">Mua tối thiểu 500.000đ</div>
+                        </div>
+                    </div>
+                    <div class="content__select--button">Áp dụng</div>
+                </div>
+                <div class="content__select">
+                    <img src="./assets/image/discount.svg" alt="icon">
+                    <div class="content__select--info">
+                        <div class="info__title">NTHG100K</div>
+                        <div class="info__list">
+                            <div class="info__list--item">Giảm 100.000đ giá trị đơn hàng</div>
+                            <div class="info__list--item">Mua tối thiểu 1.000.000đ</div>
+                        </div>
+                    </div>
+                    <div class="content__select--button">Áp dụng</div>
+                </div>
+                <div class="content__select">
+                    <img src="./assets/image/discount.svg" alt="icon">
+                    <div class="content__select--info">
+                        <div class="info__title">NTHG200K</div>
+                        <div class="info__list">
+                            <div class="info__list--item">Giảm 200.000đ giá trị đơn hàng</div>
+                            <div class="info__list--item">Mua tối thiểu 3.000.000đ</div>
+                        </div>
+                    </div>
+                    <div class="content__select--button">Áp dụng</div>
+                </div>
+                <div class="content__select">
+                    <img src="./assets/image/discount.svg" alt="icon">
+                    <div class="content__select--info">
+                        <div class="info__title">NTHG300K</div>
+                        <div class="info__list">
+                            <div class="info__list--item">Giảm 300.000đ giá trị đơn hàng</div>
+                            <div class="info__list--item">Mua tối thiểu 5.000.000đ</div>
+                        </div>
+                    </div>
+                    <div class="content__select--button">Áp dụng</div>
+                </div>
+                <div class="content__select">
+                    <img src="./assets/image/discount.svg" alt="icon">
+                    <div class="content__select--info">
+                        <div class="info__title">NTHG50K</div>
+                        <div class="info__list">
+                            <div class="info__list--item">Giảm 500.000đ giá trị đơn hàng</div>
+                            <div class="info__list--item">Mua tối thiểu 8.000.000đ</div>
+                        </div>
+                    </div>
+                    <div class="content__select--button">Áp dụng</div>
+                </div>
+            </div>
+        </div>
+        <div class="overlay__success">
+            <div class="overlay" onclick="hideOverlay()"></div>
+            <div class="success">
+                <img src="./assets/image/badge-check.png" alt="check">
+                <div class="success__title">Đặt hàng thành công</div>
+                <div class="success__button">
+                    <a href="index.html" class="btn btn-rounded">Quay lại trang chủ</a>
+                    <a href="tatcasanpham.html" class="btn btn-primary">Tiếp tục mua hàng</a>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrap">
+                    <div class="footer__col">
+                        <h3 class="footer__title">
+                            Nội thất Hoàng Gia
+                        </h3>
+                        <p class="footer__text">
+                            Nội thất Hoàng Gia là thương hiệu đến từ Savimex với gần 40 năm kinh nghiệm trong việc sản
+                            xuất và xuất khẩu nội thất đạt chuẩn quốc tế.
+                        </p>
+                    </div>
+                    <div class="footer__col">
+                        <h3 class="footer__title">
+                            Dịch vụ
+                        </h3>
+                        <ul class="footer__list">
+                            <li><a href="#" class="link">Chính sách Bán hàng</a></li>
+                            <li><a href="#" class="link">Chính sách Giao hàng & Lắp đặt</a></li>
+                            <li><a href="#" class="link">Chính sách Đổi trả</a></li>
+                            <li><a href="#" class="link">Chính sách Bảo hành & Bảo trì</a></li>
+                            <li><a href="#" class="link">Chính sách Đối tác Bán hàng</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3 class="footer__title">
+                            Thông tin liên hệ
+                        </h3>
+                        <ul class="footer__list">
+                            <li><a href="#" class="link"><i class="fa-sharp fa-solid fa-location-dot"></i>Showroom: 96
+                                    Định Công - Hoàng Mai - Hà Nội</a></li>
+                            <li><a href="#" class="link"><i class="fa-solid fa-phone"></i>0123456789</a></li>
+                            <li><a href="#" class="link"><i class="fa-solid fa-envelope"></i>cskh@contact.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3 class="footer__title">
+                            Mạng xã hội
+                        </h3>
+                        <div class="footer__social">
+                            <a href="#" class="footer__social--item">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="footer__social--item">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="#" class="footer__social--item">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__copyright">
+                    Copyright © 2023 Nội thất Hoàng Gia
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html> 

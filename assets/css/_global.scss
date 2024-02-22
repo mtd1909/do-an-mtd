@@ -1,15 +1,15 @@
 :root {
     //brand
-    --brand-50: #f2f0ee;
-    --brand-100: #d5d0cc;
-    --brand-200: #c1b9b3;
-    --brand-300: #a59890;
-    --brand-400: #93857a;
+    --brand-50: #eaeef2;
+    --brand-100: #bdcad8;
+    --brand-200: #9db0c5;
+    --brand-300: #718caa;
+    --brand-400: #557699;
     --brand-500: #2b5480;
-    --brand-600: #6d5d51;
-    --brand-700: #55483f;
-    --brand-800: #423831;
-    --brand-900: #f2f0ee;
+    --brand-600: #274c74;
+    --brand-700: #1f3c5b;
+    --brand-800: #182e46;
+    --brand-900: #122336;
     // neutral
     --neutral-50: #f3f4f5;
     --neutral-100: #dbdde1;
@@ -22,12 +22,27 @@
     --neutral-800: #4c5057;
     --neutral-900: #3a3d42;
 
-    --secondary: #FFCC00    ;
+    // info
+    --info-50: #E7F8FE;
+    --info-100: #B6E9FD;
+    --info-200: #92DEFC;
+    --info-300: #61CFFB;
+    --info-400: #42C6FA;
+    --info-500: #13B8F9;
+    --info-600: #11A7E3;
+    --info-700: #0D83B1;
+    --info-800: #0A6589;
+    --info-900: #084D69;
+
+    // secondary
+    --secondary-400: #FFD738;
+    --secondary-500: #FFCC00;
+    --secondary-600: #F0C000;
     --success: #070807;
     --warning: #ffc400;
     --error: #ff3b30;
     --white: #fff;
-    --text: #111111;
+    --text: #2A2A2A;
     --text-inactive: #b5b6b9;
     --bg-primary: #786659;
     --bg-secondary: #fafbfc;
@@ -95,7 +110,7 @@ a {
     transition: all 0.3s ease;
     &.link {
         &:hover {
-            color: var(--secondary) !important;
+            color: var(--secondary-500) !important;
         }
     }
 }
@@ -112,11 +127,11 @@ img {
     overflow: hidden;
 }
 
-.pt-120 {
-    padding-top: 120px;
+.pt-90 {
+    padding-top: 90px;
 }
-.pb-120 {
-    padding-bottom: 120px;
+.pb-90 {
+    padding-bottom: 90px;
 }
 
 .main {
@@ -132,28 +147,45 @@ img {
     text-align: center;
     text-transform: uppercase;
     cursor: pointer;
-    &.btn--primary {
+    &.btn-primary {
         background-color: var(--brand-500);
         &:hover {
             color: var(--white);
         }
     }
-    &.btn--login {
+    &.btn-login {
         border: 1px solid var(--neutral-100);
         color: var(--text);
         text-transform: unset;
         display: flex;
+        justify-content: center;
         img {
             width: 24px;
             height: 24px;
-            margin-right: 12px;
+            margin-right: 8px;
         }
     }
-    &.btn--full {
+    &.btn-full {
         display: block;
     }
     &:hover {
         opacity: 0.8;
+    }
+    &.btn-rounded {
+        border: 1px solid var(--brand-500);
+        color: var(--brand-500);
+        font-weight: 500;
+        transition: all 0.3s ease;
+        &:hover {
+            color: white;
+            background-color: var(--brand-400);
+            opacity: 1;
+        }
+    }
+    &.btn-inactive {
+        background: var(--neutral-100);
+        color: var(--neutral-500);
+        white-space: nowrap;
     }
 }
 
@@ -186,7 +218,7 @@ input, select {
         border-radius: 6px;
         &:hover {
             .card__name {
-                color: var(--secondary);
+                color: var(--secondary-500);
             }
         }
         &.feedback {
@@ -249,7 +281,7 @@ input, select {
             display: block;
             .card__img--sale {
                 position: absolute;
-                background-color: var(--secondary);
+                background-color: var(--secondary-500);
                 color: var(--white);
                 right: 0;
                 top: 24px;
@@ -343,7 +375,7 @@ input, select {
                 align-items: center;
                 gap: 8px;
                 i {
-                    color: var(--secondary);
+                    color: var(--secondary-500);
                 }
                 .rate__times {
                     font-weight: 500;

@@ -15,12 +15,12 @@
         <header class="header">
             <div class="container">
                 <div class="header__wrap">
-                    <a href="#" class="logo">
+                    <a href="trangchu-dadangnhap.html" class="logo">
                         <img src="assets/image/logo.svg" alt="logo image">
                     </a>
                     <ul class="menu">
-                        <li><a class="link" href="index.html">Trang chủ</a></li>
-                        <li><a class="link active" href="tatcasanpham.html">Sản phẩm</a></li>
+                        <li><a class="link active" href="index.html">Trang chủ</a></li>
+                        <li><a class="link" href="tatcasanpham.html">Sản phẩm</a></li>
                         <li><a class="link" href="vechungtoi.html">Về chúng tôi</a></li>
                         <li><a class="link" href="blog.html">Blog</a></li>
                     </ul>
@@ -29,14 +29,31 @@
                         <i class="fa-regular fa-magnifying-glass"></i>
                     </div>
                     <div class="user">
-                        <a href="#" class="user__function link">
+                        <a href="giohang.html" class="user__function link">
                             <i class="fa-regular fa-cart-shopping"></i>
                         </a>
                         <a href="#" class="user__function link">
                             <i class="fa-regular fa-heart"></i>
                         </a>
-                        <div class="user__function">
-                            <i class="fa-regular fa-user"></i>
+                        <div class="user__function function">
+                            <div class="user__info">
+                                <img src="./assets/image/avatar-header.png" alt="avatar">
+                                <div class="user__info--name">Đạt Mai</div>
+                            </div>
+                            <div class="popup-user">
+                                <a href="taikhoan-khongcothongtin.html " class="popup-user__item">
+                                    <i class="fa-regular fa-user"></i>
+                                    <p>Thông tin cá nhân</p>
+                                </a>
+                                <a href="lichsumuahang.html" class="popup-user__item">
+                                    <i class="fa-regular fa-cart-shopping"></i>
+                                    <p class="ml-2">Lịch sử mua hàng</p>
+                                </a>
+                                <a href="/" class="popup-user__item logout">
+                                    <i class="fa-regular fa-right-from-bracket"></i>
+                                    <p>Đăng xuất</p>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -46,7 +63,7 @@
             <div class="breadcrumb">
                 <div class="container">
                     <div class="breadcrumb__link">
-                        <a href="index.html">Trang chủ</a>
+                        <a href="trangchu-dadangnhap.html">Trang chủ</a>
                         <span>/</span>
                         <p>Giỏ hàng</p>
                     </div>
@@ -54,11 +71,11 @@
             </div>
             <div class="cart">
                 <div class="container">
-                    <div class="cart--title">
+                    <div class="cart__title">
                         Giỏ hàng của bạn
                     </div>
-                    <div class="cart--content">
-                        <div class="cart--content__left">
+                    <div class="cart__content">
+                        <div class="cart__content--left">
                             <div class="cart__products">
                                 <div class="cart__products--title">
                                     Có <span>2 sản phẩm</span> trong giỏ hàng
@@ -120,8 +137,31 @@
                             </div>
 
                         </div>
-                        <div class="cart--content__right">
-
+                        <div class="cart__content--right">
+                            <div class="cart__info">
+                                <h3 class="cart__content--title">Thông tin đơn hàng</h3>
+                                <div class="cart__content--total">
+                                    <div class="total__title">
+                                        Tổng tiền
+                                    </div>
+                                    <div class="total__price">
+                                        1.998.000đ
+                                    </div>
+                                </div>
+                                <a href="thanhtoan.html" class="btn btn-primary">Thanh toán</a>
+                                <a href="tatcasanpham.html" class="btn btn-rounded">Tiếp tục mua hàng</a>
+                            </div>
+                            <div class="info--policy">
+                                <div class="policy">Miễn phí giao hàng & lắp đặt tại tất cả quận huyện thuộc TP.HCM, Hà
+                                    Nội, Khu đô thị Ecopark, Biên Hòa và một số quận thuộc Bình Dương (*)</div>
+                                <div class="policy">Miễn phí 1 đổi 1 - Bảo hành 2 năm - Bảo trì trọn đời (**)</div>
+                                <div class="policy mb-30">Nhập mã ưu đãi <span>NTHG50K, NTHG100K, NTHG200K, NTHG300K,
+                                        NTHG500K</span>. Chỉ áp dụng 01 lần/01 khách hàng và không áp dụng cùng với các
+                                    chương trình khuyến mại khác. Hạn sử dụng: 30/04/2023 (*)</div>
+                                <div class="policy--note">(*) Không áp dụng cho danh mục Đồ Trang Trí</div>
+                                <div class="policy--note">(**) Không áp dụng cho các sản phẩm Clearance. Chỉ bảo hành 01
+                                    năm cho khung ghế, mâm và cần đối với Ghế Văn Phòng</div>
+                            </div>
                         </div>
                     </div>
                 </div>

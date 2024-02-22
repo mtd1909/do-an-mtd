@@ -1,5 +1,5 @@
 .products-page {
-    padding: 60px 0 120px 0;
+    padding: 60px 0 90px 0;
     .products-page--header {
         display: flex;
         justify-content: space-between;
@@ -59,10 +59,10 @@
             cursor: pointer;
             transition: all 0.3s ease;
             &.active {
-                color: var(--secondary);
+                color: var(--secondary-500);
             }
             &:hover {
-                color: var(--secondary);
+                color: var(--secondary-500);
             }
         }
     }

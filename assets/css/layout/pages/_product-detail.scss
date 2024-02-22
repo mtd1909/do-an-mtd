@@ -1,9 +1,9 @@
 .product-detail {
-    padding: 60px 0 120px 0;
+    padding: 60px 0 90px 0;
     .product-detail__overview {
         display: flex;
         gap: 30px;
-        .overview--preview {
+        .overview__preview {
             display: flex;
             flex-direction: column;
             gap: 30px;
@@ -18,7 +18,7 @@
                 }
             }
         }
-        .overview--main {
+        .overview__main {
             min-width: 690px;
             height: 690px;
             img {
@@ -27,14 +27,14 @@
                 object-fit: cover;
             }
         }
-        .overview--info {
-            .info--title {
+        .overview__info {
+            .info__title {
                 font-size: 30px;
                 font-weight: 600;
                 color: var(--text);
                 margin-bottom: 30px;
             }
-            .info--rate {
+            .info__rate {
                 display: flex;
                 justify-content: space-between;
                 margin-bottom: 30px;
@@ -43,7 +43,7 @@
                     align-items: center;
                     gap: 8px;
                     i {
-                        color: var(--secondary);
+                        color: var(--secondary-500);
                     }
                     .rate__times {
                         font-weight: 500;
@@ -76,7 +76,7 @@
                 align-items: center;
                 gap: 6px;
                 .price__new {
-                    color: var(--secondary);
+                    color: var(--brand-500);
                     font-size: 30px;
                     font-weight: 500;
                     line-height: 1;
@@ -140,8 +140,8 @@
             .info--size {
                 display: flex;
                 gap: 12px;
-                &.mb-30 {
-                    margin-bottom: 30px;
+                &.mb-16 {
+                    margin-bottom: 16px;
                 }
                 .size--title {
                     font-size: 16px;
@@ -188,11 +188,12 @@
                     }
                 }
             }
-            .info--btn {
-                border: 1px solid var(--neutral-100);
-                color: var(--text);
+            .btn-rounded {
                 margin-top: 12px;
                 margin-bottom: 60px;
+            }
+            .btn {
+                width: 100%;
             }
             .info--policy {
                 .policy {
@@ -223,7 +224,7 @@
         }
     }
     .product-detail--info {
-        padding-top: 100px;
+        padding-top: 60px;
         .info--title {
             font-size: 30px;
             font-weight: 600;
@@ -260,7 +261,7 @@
                 text-transform: uppercase;
             }
             a {
-                color: var(--secondary);
+                color: var(--secondary-500);
                 font-weight: 500;
                 transition: all 0.3s ease;
                 &:hover {
