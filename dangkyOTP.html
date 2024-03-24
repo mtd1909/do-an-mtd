@@ -12,33 +12,73 @@
 
 <body>
     <div class="wrapper">
+        <div class="overlay" onclick="hideOverlayMobile()"></div>
         <header class="header">
             <div class="container">
                 <div class="header__wrap">
-                    <a href="/do-an-mtd/" class="logo">
-                        <img src="assets/image/logo.svg" alt="logo image">
+                    <a href="/trangchu-dadangnhap.html" class="logo">
+                        <img class="desktop" src="assets/image/logo.svg" alt="logo image">
+                        <img class="mobile" src="assets/image/logo-mb.svg" alt="logo image">
                     </a>
                     <ul class="menu">
-                        <li><a class="link active" href="index.html">Trang chủ</a></li>
+                        <li><a class="link active" href="trangchu-dadangnhap.html">Trang chủ</a></li>
                         <li><a class="link" href="tatcasanpham.html">Sản phẩm</a></li>
                         <li><a class="link" href="vechungtoi.html">Về chúng tôi</a></li>
                         <li><a class="link" href="blog.html">Blog</a></li>
                     </ul>
-                    <div class="search">
-                        <input type="text" placeholder="Tìm kiếm...">
-                        <i class="fa-regular fa-magnifying-glass"></i>
+                    <div class="search__desktop">
+                        <input type="text" placeholder="Tìm kiếm..." onkeydown="checkEnter(event)">
+                        <i onclick="search()" class="fa-regular fa-magnifying-glass"></i>
                     </div>
                     <div class="user">
                         <a href="giohang.html" class="user__function link">
                             <i class="fa-regular fa-cart-shopping"></i>
                         </a>
-                        <a href="#" class="user__function link">
+                        <a href="yeuthich.html" class="user__function link">
                             <i class="fa-regular fa-heart"></i>
                         </a>
-                        <a href="dangnhap.html" class="user__function link">
-                            <i class="fa-regular fa-right-to-bracket"></i>
-                        </a>
+                        <div class="user__function function">
+                            <div class="user__info">
+                                <img src="./assets/image/avatar-header.png" alt="avatar">
+                                <div class="user__info--name">Đạt Mai</div>
+                            </div>
+                            <div class="popup-user">
+                                <a href="taikhoan-khongcothongtin.html " class="popup-user__item">
+                                    <i class="fa-regular fa-user"></i>
+                                    <p>Thông tin cá nhân</p>
+                                </a>
+                                <a href="lichsumuahang.html" class="popup-user__item">
+                                    <i class="fa-regular fa-cart-shopping"></i>
+                                    <p class="ml-2">Lịch sử mua hàng</p>
+                                </a>
+                                <a href="/" class="popup-user__item logout">
+                                    <i class="fa-regular fa-right-from-bracket"></i>
+                                    <p>Đăng xuất</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="menu__bars" onclick="toggleMenu()">
+                            <i class="fa-regular fa-bars"></i>
+                            <i class="fa-regular fa-xmark"></i>
+                        </div>
                     </div>
+                </div>
+                <div class="header__mobile">
+                    <div class="search__mobile">
+                        <input type="text" placeholder="Tìm kiếm..." onkeydown="checkEnter(event)">
+                        <i onclick="search()" class="fa-regular fa-magnifying-glass"></i>
+                    </div>
+                    <div class="divider"></div>
+                    <ul class="menu__mobile">
+                        <li><a class="link active" href="trangchu-dadangnhap.html">Trang chủ</a></li>
+                        <li><a class="link" href="tatcasanpham.html">Sản phẩm</a></li>
+                        <li><a class="link" href="vechungtoi.html">Về chúng tôi</a></li>
+                        <li><a class="link" href="blog.html">Blog</a></li>
+                        <div class="divider"></div>
+                        <li><a class="link" href="taikhoan-khongcothongtin.html">Thông tin cá nhân</a></li>
+                        <li><a class="link" href="lichsumuahang.html">Lịch sử mua hàng</a></li>
+                        <li><a class="link red" href="/">Đăng xuất</a></li>
+                    </ul>
                 </div>
             </div>
         </header>
@@ -48,30 +88,30 @@
                     <h1 class="login__title">Tạo tài khoản</h1>
                     <p class="login__text limit"">Nhập mã xác thực để xác nhận số điện thoại
                         chính chủ dùng cho tài khoản Nội Thất Hoàng Gia</p>
-                    <form action="#">
-                        <div class="login__list">
-                            <div class="login__input">
-                                <input type="number" maxlength="1" oninput="validateInput(event)">
-                            </div>
-                            <div class="login__input">
-                                <input type="number" maxlength="1" oninput="validateInput(event)">
-                            </div>
-                            <div class="login__input">
-                                <input type="number" maxlength="1" oninput="validateInput(event)">
-                            </div>
-                            <div class="login__input">
-                                <input type="number" maxlength="1" oninput="validateInput(event)">
-                            </div>
-                            <div class="login__input">
-                                <input type="number" maxlength="1" oninput="validateInput(event)">
-                            </div>
-                            <div class="login__input">
-                                <input type="number" maxlength="1" oninput="validateInput(event)">
-                            </div>
+                    <form action=" #">
+                    <div class="login__list">
+                        <div class="login__input">
+                            <input type="number" maxlength="1" oninput="validateInput(event)">
                         </div>
-                        <div class="login__btn">
-                            <a href="dangkymatkhau.html" class="btn btn-primary">Xác thực mã OTP</a>
+                        <div class="login__input">
+                            <input type="number" maxlength="1" oninput="validateInput(event)">
                         </div>
+                        <div class="login__input">
+                            <input type="number" maxlength="1" oninput="validateInput(event)">
+                        </div>
+                        <div class="login__input">
+                            <input type="number" maxlength="1" oninput="validateInput(event)">
+                        </div>
+                        <div class="login__input">
+                            <input type="number" maxlength="1" oninput="validateInput(event)">
+                        </div>
+                        <div class="login__input">
+                            <input type="number" maxlength="1" oninput="validateInput(event)">
+                        </div>
+                    </div>
+                    <div class="login__btn">
+                        <a href="dangkymatkhau.html" class="btn btn-primary">Xác thực mã OTP</a>
+                    </div>
                     </form>
                     <div class="login__signup">
                         Bạn đã có tài khoản? <a href="dangnhap.html">Đăng nhập</a>
@@ -152,6 +192,12 @@
                 // Clear the input if it's not a number
                 event.target.value = "";
             }
+        }
+        const toggleMenu = () => {
+            const headerMobile = document.querySelector('.header__mobile')
+            const menuBar = document.querySelector('.menu__bars')
+            headerMobile.classList.toggle('show')
+            menuBar.classList.toggle('show')
         }
     </script>
 </body>

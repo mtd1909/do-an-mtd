@@ -60,16 +60,45 @@
         background-size: 100% 100%;
         display: flex;
         align-items: center;
+        @media (max-width: 1199px) {
+            height: calc(100vh - 56px);
+        }
+        @media (max-width: 767px) {
+            background-image: url('../image/hero-mobile.jpg');
+            align-items: flex-start;
+        }
         .hero__content {
             width: 50%;
+            @media (max-width: 767px) {
+                width: 100%;
+            }
             .hero__content--title {
                 margin-bottom: 36px;
+                &.desktop {
+                    display: block;
+                    @media (max-width: 767px) {
+                        display: none;
+                    }
+                }
+                &.mobile {
+                    display: none;
+                    @media (max-width: 767px) {
+                        display: block;
+                    }
+                }
+                @media (max-width: 767px) {
+                    margin-top: 60px;
+                }
             }
             .hero__content--text {
                 max-width: 600px;
                 margin-bottom: 48px;
                 color: var(--text);
                 font-size: 18px;
+                @media (max-width: 767px) {
+                    font-size: 14px;
+                    margin-bottom: 36px;
+                }
             }
             .hero__content--btn {
                 background: var(--brand-500);

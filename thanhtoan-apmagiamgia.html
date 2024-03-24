@@ -12,27 +12,29 @@
 
 <body>
     <div class="wrapper">
+        <div class="overlay" onclick="hideOverlayMobile()"></div>
         <header class="header">
             <div class="container">
                 <div class="header__wrap">
-                    <a href="trangchu-dadangnhap.html" class="logo">
-                        <img src="assets/image/logo.svg" alt="logo image">
+                    <a href="/trangchu-dadangnhap.html" class="logo">
+                        <img class="desktop" src="assets/image/logo.svg" alt="logo image">
+                        <img class="mobile" src="assets/image/logo-mb.svg" alt="logo image">
                     </a>
                     <ul class="menu">
-                        <li><a class="link active" href="index.html">Trang chủ</a></li>
+                        <li><a class="link active" href="trangchu-dadangnhap.html">Trang chủ</a></li>
                         <li><a class="link" href="tatcasanpham.html">Sản phẩm</a></li>
                         <li><a class="link" href="vechungtoi.html">Về chúng tôi</a></li>
                         <li><a class="link" href="blog.html">Blog</a></li>
                     </ul>
-                    <div class="search">
-                        <input type="text" placeholder="Tìm kiếm...">
-                        <i class="fa-regular fa-magnifying-glass"></i>
+                    <div class="search__desktop">
+                        <input type="text" placeholder="Tìm kiếm..." onkeydown="checkEnter(event)">
+                        <i onclick="search()" class="fa-regular fa-magnifying-glass"></i>
                     </div>
                     <div class="user">
                         <a href="giohang.html" class="user__function link">
                             <i class="fa-regular fa-cart-shopping"></i>
                         </a>
-                        <a href="#" class="user__function link">
+                        <a href="yeuthich.html" class="user__function link">
                             <i class="fa-regular fa-heart"></i>
                         </a>
                         <div class="user__function function">
@@ -49,13 +51,34 @@
                                     <i class="fa-regular fa-cart-shopping"></i>
                                     <p class="ml-2">Lịch sử mua hàng</p>
                                 </a>
-                                <a href="/do-an-mtd/" class="popup-user__item logout">
+                                <a href="/" class="popup-user__item logout">
                                     <i class="fa-regular fa-right-from-bracket"></i>
                                     <p>Đăng xuất</p>
                                 </a>
                             </div>
                         </div>
+                        <div class="menu__bars" onclick="toggleMenu()">
+                            <i class="fa-regular fa-bars"></i>
+                            <i class="fa-regular fa-xmark"></i>
+                        </div>
                     </div>
+                </div>
+                <div class="header__mobile">
+                    <div class="search__mobile">
+                        <input type="text" placeholder="Tìm kiếm..." onkeydown="checkEnter(event)">
+                        <i onclick="search()" class="fa-regular fa-magnifying-glass"></i>
+                    </div>
+                    <div class="divider"></div>
+                    <ul class="menu__mobile">
+                        <li><a class="link active" href="trangchu-dadangnhap.html">Trang chủ</a></li>
+                        <li><a class="link" href="tatcasanpham.html">Sản phẩm</a></li>
+                        <li><a class="link" href="vechungtoi.html">Về chúng tôi</a></li>
+                        <li><a class="link" href="blog.html">Blog</a></li>
+                        <div class="divider"></div>
+                        <li><a class="link" href="taikhoan-khongcothongtin.html">Thông tin cá nhân</a></li>
+                        <li><a class="link" href="lichsumuahang.html">Lịch sử mua hàng</a></li>
+                        <li><a class="link red" href="/">Đăng xuất</a></li>
+                    </ul>
                 </div>
             </div>
         </header>
@@ -83,7 +106,8 @@
                                         <option>Đà Nẵng</option>
                                         <option>Thành phố Hồ Chí Minh</option>
                                     </select>
-                                    <select name="district" id="district" class="check-option" onchange="checkSelect(2)">
+                                    <select name="district" id="district" class="check-option"
+                                        onchange="checkSelect(2)">
                                         <option hidden>Quận / Huyện</option>
                                         <option>Quận Thanh Xuân</option>
                                         <option>Quận Đống Đa</option>
@@ -121,14 +145,16 @@
                                     <div class="payment__method--dot"></div>
                                     <div class="payment__method--content">
                                         <div class="content__title">Thanh toán khi nhận hàng</div>
-                                        <div class="content__subtitle">Thanh toán trực tiếp với nhân viên giao hàng khi nhận hàng</div>
+                                        <div class="content__subtitle">Thanh toán trực tiếp với nhân viên giao hàng khi
+                                            nhận hàng</div>
                                     </div>
                                 </div>
                                 <div class="payment__method">
                                     <div class="payment__method--dot"></div>
                                     <div class="payment__method--content">
                                         <div class="content__title">Thanh toán bằng ngân hàng điện tử</div>
-                                        <div class="content__subtitle">Hỗ trợ các ngân hàng: Vietcombank, VPBank, MB Bank,...</div>
+                                        <div class="content__subtitle">Hỗ trợ các ngân hàng: Vietcombank, VPBank, MB
+                                            Bank,...</div>
                                     </div>
                                 </div>
                                 <div class="payment__method">
@@ -146,7 +172,7 @@
                         </div>
                         <div class="payment__content--right">
                             <h3 class="payment__subtitle">
-                                Thông tin đơn hàng 
+                                Thông tin đơn hàng
                             </h3>
                             <div class="cart__products--order">
                                 <div class="order__left">
@@ -178,21 +204,21 @@
                             <div class="cart__products--order">
                                 <div class="order__left">
                                     <div class="order__left--img">
-                                        <img src="assets/image/ghe-an-cao-su.jpg" alt="san pham">
+                                        <img src="assets/image/ghe-an-oc-cho.jpg" alt="san pham">
                                     </div>
                                     <div class="order__left--content">
                                         <div class="content__title">
-                                            Ghế ăn gỗ cao su tự nhiên
+                                            GHẾ PHÒNG ĂN GỖ SỒI CAO CẤP
                                         </div>
                                         <div class="content__desc">MÀU TỰ NHIÊN</div>
                                         <div class="content__info">
                                             <div class="content__info--quantity">1</div>
                                             <div class="content__info--price">
                                                 <div class="price__new">
-                                                    999.000đ
+                                                    1.199.000đ
                                                 </div>
                                                 <div class="price__old">
-                                                    1.999.000
+                                                    1.999.000đ
                                                 </div>
                                             </div>
                                         </div>
@@ -228,7 +254,7 @@
                             </div>
                             <div class="payment__cash">
                                 <div class="payment__cash--title">Tạm tính</div>
-                                <div class="payment__cash--price">1.998.000đ</div>
+                                <div class="payment__cash--price">2.198.000đ</div>
                             </div>
                             <div class="payment__cash">
                                 <div class="payment__cash--title">Mã giảm giá</div>
@@ -240,7 +266,7 @@
                             </div>
                             <div class="payment__total">
                                 <div class="payment__total--title">Tổng cộng</div>
-                                <div class="payment__total--price">1.926.800đ</div>
+                                <div class="payment__total--price">2.126.800đ</div>
                             </div>
                         </div>
                     </div>
@@ -248,9 +274,10 @@
             </div>
         </div>
         <div class="overlay__deliver">
-            <div class="overlay" onclick="hideOverlay()"></div>
+            <div class="overlay" onclick="hideOverlayMobile()"></div>
             <div class="overlay__deliver--content">
-                <div class="content__title">Chọn đơn vị vận chuyển<i onclick="hideOverlay()" class="fa-regular fa-xmark"></i></div>
+                <div class="content__title">Chọn đơn vị vận chuyển<i onclick="hideOverlay()"
+                        class="fa-regular fa-xmark"></i></div>
                 <div class="content__select">
                     <img src="./assets/image/deliver.svg" alt="icon">
                     <div class="content__select--info">
@@ -292,7 +319,8 @@
         <div class="overlay__discount">
             <div onclick="hideOverlay()" class="overlay"></div>
             <div class="overlay__deliver--content">
-                <div class="content__title">Chọn giảm giá<i onclick="hideOverlay()" class="fa-regular fa-xmark"></i></div>
+                <div class="content__title">Chọn giảm giá<i onclick="hideOverlay()" class="fa-regular fa-xmark"></i>
+                </div>
                 <div class="content__select">
                     <img src="./assets/image/discount.svg" alt="icon">
                     <div class="content__select--info">
@@ -351,12 +379,12 @@
             </div>
         </div>
         <div class="overlay__success">
-            <div class="overlay" onclick="hideOverlay()"></div>
+            <div class="overlay" onclick="hideOverlayMobile()"></div>
             <div class="success">
                 <img src="./assets/image/badge-check.png" alt="check">
                 <div class="success__title">Đặt hàng thành công</div>
                 <div class="success__button">
-                    <a href="index.html" class="btn btn-rounded">Quay lại trang chủ</a>
+                    <a href="trangchu-dadangnhap.html" class="btn btn-rounded">Quay lại trang chủ</a>
                     <a href="tatcasanpham.html" class="btn btn-primary">Tiếp tục mua hàng</a>
                 </div>
             </div>
@@ -422,4 +450,4 @@
     <script src="js/script.js"></script>
 </body>
 
-</html> 
+</html>

@@ -47,7 +47,7 @@
     --bg-primary: #786659;
     --bg-secondary: #fafbfc;
     --bg-tertiary: #f2f3f5;
-    --shadow: 8px 2px 6px rgba(0, 0, 0, 0.06);
+    --shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.06);
 }
 
 @font-face {
@@ -115,12 +115,27 @@ a {
     }
 }
 
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.6);
+    visibility: hidden;
+    opacity: 0;
+    &.show {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
 li {
     list-style-type: none;
 }
 
 img {
     max-width: 100%;
+    display: block;
 }
 
 .wrapper {
@@ -136,6 +151,9 @@ img {
 
 .main {
     margin-top: 80px;
+    @media (max-width: 1199px) {
+        margin-top: 56px;
+    }
 }
 
 .btn {
@@ -213,9 +231,18 @@ input, select {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
+    @media (max-width: 767px) {
+        gap: 8px;
+    }
     .card {
         width: calc((100% - 90px) / 4);
         border-radius: 6px;
+        @media (max-width: 991px) {
+            width: calc((100% - 30px) / 2);
+        }
+        @media (max-width: 767px) {
+            width: calc((100% - 8px) / 2);
+        }
         &:hover {
             .card__name {
                 color: var(--secondary-500);
@@ -279,15 +306,24 @@ input, select {
             width: 330px;
             height: 330px;
             display: block;
+            @media (max-width: 1439px) {
+                width: unset;
+                height: unset;
+            }
             .card__img--sale {
                 position: absolute;
+                font-weight: 500;
                 background-color: var(--secondary-500);
-                color: var(--white);
+                color: #111111;
                 right: 0;
                 top: 24px;
                 padding: 8px 36px;
                 line-height: 1.5;
                 border-radius: 2px;
+                @media (max-width: 767px) {
+                    padding: 4px 12px;
+                    font-size: 10px;
+                }
             }
             img {
                 width: 100%;
@@ -312,6 +348,16 @@ input, select {
             font-size: 18px;
             font-weight: 500;
             display: block;
+            @media (max-width: 1439px) {
+                font-size: 16px;
+            }
+            @media (max-width: 767px) {
+                font-size: 14px;
+                margin: 4px 0;
+            }
+            @media (max-width: 499px) {
+                min-height: 42px;
+            }
             &.title {
                 font-size: 20px;
                 margin: 0;
@@ -327,8 +373,18 @@ input, select {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            @media (max-width: 1439px) {
+                &:last-child {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 4px;
+                }
+            }
             &:last-child {
                 margin-top: 10px;
+                @media (max-width: 767px) {
+                    margin-top: 4px;
+                }
             }
             .card__name {
                 height: 24px;
@@ -347,16 +403,32 @@ input, select {
                 display: flex;
                 align-items: center;
                 gap: 6px;
+                @media (max-width: 767px) {
+                    flex-direction: column-reverse;
+                    align-items: flex-start;
+                    gap: 4px;
+                }
                 .price__new {
                     color: var(--primary);
                     font-size: 18px;
                     font-weight: 500;
+                    @media (max-width: 1439px) {
+                        font-size: 16px;
+                    }
+                    @media (max-width: 767px) {
+                        font-size: 14px;
+                        line-height: 1;
+                    }
                 }
                 .price__old {
                     color: var(--text-inactive);
                     font-size: 13px;
                     font-weight: 500;
                     text-decoration: line-through;
+                    @media (max-width: 767px) {
+                        font-size: 10px;
+                        line-height: 1;
+                    }
                 }
                 .price__underline {
                     text-decoration: underline;
@@ -368,18 +440,33 @@ input, select {
                 height: 27px;
                 i {
                     font-size: 20px;
+                    transition: all 0.3s ease;
+                }
+                &:hover {
+                    i {
+                        color: var(--secondary-500);
+                    }
                 }
             }
             .card__info--rate {
                 display: flex;
                 align-items: center;
                 gap: 8px;
+                @media (max-width: 767px) {
+                    gap: 4px;
+                }
                 i {
                     color: var(--secondary-500);
+                    @media (max-width: 767px) {
+                        font-size: 10px;
+                    }
                 }
                 .rate__times {
                     font-weight: 500;
                     color: var(--text-inactive);
+                    @media (max-width: 767px) {
+                        font-size: 12px;
+                    }
                 }
                 .rate__star {
                     font-size: 18px;
@@ -389,6 +476,9 @@ input, select {
             }
             .card__info--sold {
                 color: var(--text-inactive);
+                @media (max-width: 767px) {
+                    font-size: 12px;
+                }
             }
             .card__time {
                 margin-top: 0;
@@ -429,6 +519,7 @@ select {
     background-size: 16px 16px;
     cursor: pointer;
 }
+
 
 @keyframes fadeInDown {
     0% {

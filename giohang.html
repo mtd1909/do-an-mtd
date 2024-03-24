@@ -12,27 +12,29 @@
 
 <body>
     <div class="wrapper">
+        <div class="overlay" onclick="hideOverlayMobile()"></div>
         <header class="header">
             <div class="container">
                 <div class="header__wrap">
-                    <a href="trangchu-dadangnhap.html" class="logo">
-                        <img src="assets/image/logo.svg" alt="logo image">
+                    <a href="/trangchu-dadangnhap.html" class="logo">
+                        <img class="desktop" src="assets/image/logo.svg" alt="logo image">
+                        <img class="mobile" src="assets/image/logo-mb.svg" alt="logo image">
                     </a>
                     <ul class="menu">
-                        <li><a class="link active" href="index.html">Trang chủ</a></li>
+                        <li><a class="link active" href="trangchu-dadangnhap.html">Trang chủ</a></li>
                         <li><a class="link" href="tatcasanpham.html">Sản phẩm</a></li>
                         <li><a class="link" href="vechungtoi.html">Về chúng tôi</a></li>
                         <li><a class="link" href="blog.html">Blog</a></li>
                     </ul>
-                    <div class="search">
-                        <input type="text" placeholder="Tìm kiếm...">
-                        <i class="fa-regular fa-magnifying-glass"></i>
+                    <div class="search__desktop">
+                        <input type="text" placeholder="Tìm kiếm..." onkeydown="checkEnter(event)">
+                        <i onclick="search()" class="fa-regular fa-magnifying-glass"></i>
                     </div>
                     <div class="user">
                         <a href="giohang.html" class="user__function link">
                             <i class="fa-regular fa-cart-shopping"></i>
                         </a>
-                        <a href="#" class="user__function link">
+                        <a href="yeuthich.html" class="user__function link">
                             <i class="fa-regular fa-heart"></i>
                         </a>
                         <div class="user__function function">
@@ -49,13 +51,34 @@
                                     <i class="fa-regular fa-cart-shopping"></i>
                                     <p class="ml-2">Lịch sử mua hàng</p>
                                 </a>
-                                <a href="/do-an-mtd/" class="popup-user__item logout">
+                                <a href="/" class="popup-user__item logout">
                                     <i class="fa-regular fa-right-from-bracket"></i>
                                     <p>Đăng xuất</p>
                                 </a>
                             </div>
                         </div>
+                        <div class="menu__bars" onclick="toggleMenu()">
+                            <i class="fa-regular fa-bars"></i>
+                            <i class="fa-regular fa-xmark"></i>
+                        </div>
                     </div>
+                </div>
+                <div class="header__mobile">
+                    <div class="search__mobile">
+                        <input type="text" placeholder="Tìm kiếm..." onkeydown="checkEnter(event)">
+                        <i onclick="search()" class="fa-regular fa-magnifying-glass"></i>
+                    </div>
+                    <div class="divider"></div>
+                    <ul class="menu__mobile">
+                        <li><a class="link active" href="trangchu-dadangnhap.html">Trang chủ</a></li>
+                        <li><a class="link" href="tatcasanpham.html">Sản phẩm</a></li>
+                        <li><a class="link" href="vechungtoi.html">Về chúng tôi</a></li>
+                        <li><a class="link" href="blog.html">Blog</a></li>
+                        <div class="divider"></div>
+                        <li><a class="link" href="taikhoan-khongcothongtin.html">Thông tin cá nhân</a></li>
+                        <li><a class="link" href="lichsumuahang.html">Lịch sử mua hàng</a></li>
+                        <li><a class="link red" href="/">Đăng xuất</a></li>
+                    </ul>
                 </div>
             </div>
         </header>
@@ -110,21 +133,21 @@
                                 <div class="cart__products--order">
                                     <div class="order__left">
                                         <div class="order__left--img">
-                                            <img src="assets/image/ghe-an-cao-su.jpg" alt="san pham">
+                                            <img src="assets/image/ghe-an-oc-cho.jpg " alt="san pham">
                                         </div>
                                         <div class="order__left--content">
                                             <div class="content__title">
-                                                Ghế ăn gỗ cao su tự nhiên
+                                                GHẾ PHÒNG ĂN GỖ SỒI CAO CẤP
                                             </div>
                                             <div class="content__desc">MÀU TỰ NHIÊN</div>
                                             <div class="content__info">
                                                 <div class="content__info--quantity">1</div>
                                                 <div class="content__info--price">
                                                     <div class="price__new">
-                                                        999.000đ
+                                                        1.199.000đ
                                                     </div>
                                                     <div class="price__old">
-                                                        1.999.000
+                                                        1.999.000đ
                                                     </div>
                                                 </div>
                                             </div>
@@ -145,7 +168,7 @@
                                         Tổng tiền
                                     </div>
                                     <div class="total__price">
-                                        1.998.000đ
+                                        2.198.000đ
                                     </div>
                                 </div>
                                 <a href="thanhtoan.html" class="btn btn-primary">Thanh toán</a>

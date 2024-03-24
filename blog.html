@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet"
+        href="https://redpervn.github.io/fa/css/all.min.css?fbclid=IwAR2VnCVu3fZyZybhEPHqAoRF9xJd2ZJZ43gCLfQokvfv6X5YJv1_V3HNSyw">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="overlay" onclick="hideOverlayMobile()"></div>
+        <header class="header">
+            <div class="container">
+                <div class="header__wrap">
+                    <a href="/trangchu-dadangnhap.html" class="logo">
+                        <img class="desktop" src="assets/image/logo.svg" alt="logo image">
+                        <img class="mobile" src="assets/image/logo-mb.svg" alt="logo image">
+                    </a>
+                    <ul class="menu">
+                        <li><a class="link active" href="trangchu-dadangnhap.html">Trang chủ</a></li>
+                        <li><a class="link" href="tatcasanpham.html">Sản phẩm</a></li>
+                        <li><a class="link" href="vechungtoi.html">Về chúng tôi</a></li>
+                        <li><a class="link" href="blog.html">Blog</a></li>
+                    </ul>
+                    <div class="search__desktop">
+                        <input type="text" placeholder="Tìm kiếm..." onkeydown="checkEnter(event)">
+                        <i onclick="search()" class="fa-regular fa-magnifying-glass"></i>
+                    </div>
+                    <div class="user">
+                        <a href="giohang.html" class="user__function link">
+                            <i class="fa-regular fa-cart-shopping"></i>
+                        </a>
+                        <a href="yeuthich.html" class="user__function link">
+                            <i class="fa-regular fa-heart"></i>
+                        </a>
+                        <div class="user__function function">
+                            <div class="user__info">
+                                <img src="./assets/image/avatar-header.png" alt="avatar">
+                                <div class="user__info--name">Đạt Mai</div>
+                            </div>
+                            <div class="popup-user">
+                                <a href="taikhoan-khongcothongtin.html " class="popup-user__item">
+                                    <i class="fa-regular fa-user"></i>
+                                    <p>Thông tin cá nhân</p>
+                                </a>
+                                <a href="lichsumuahang.html" class="popup-user__item">
+                                    <i class="fa-regular fa-cart-shopping"></i>
+                                    <p class="ml-2">Lịch sử mua hàng</p>
+                                </a>
+                                <a href="/" class="popup-user__item logout">
+                                    <i class="fa-regular fa-right-from-bracket"></i>
+                                    <p>Đăng xuất</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="menu__bars" onclick="toggleMenu()">
+                            <i class="fa-regular fa-bars"></i>
+                            <i class="fa-regular fa-xmark"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__mobile">
+                    <div class="search__mobile">
+                        <input type="text" placeholder="Tìm kiếm..." onkeydown="checkEnter(event)">
+                        <i onclick="search()" class="fa-regular fa-magnifying-glass"></i>
+                    </div>
+                    <div class="divider"></div>
+                    <ul class="menu__mobile">
+                        <li><a class="link active" href="trangchu-dadangnhap.html">Trang chủ</a></li>
+                        <li><a class="link" href="tatcasanpham.html">Sản phẩm</a></li>
+                        <li><a class="link" href="vechungtoi.html">Về chúng tôi</a></li>
+                        <li><a class="link" href="blog.html">Blog</a></li>
+                        <div class="divider"></div>
+                        <li><a class="link" href="taikhoan-khongcothongtin.html">Thông tin cá nhân</a></li>
+                        <li><a class="link" href="lichsumuahang.html">Lịch sử mua hàng</a></li>
+                        <li><a class="link red" href="/">Đăng xuất</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="main">
+            <div class="blog">
+                <div class="container">
+                    <div class="blog__title">Blog</div>
+                    <div class="blog__featured">
+                        <div class="blog__featured-left">
+                            <div class="blog__featured--title">BÀI VIẾT NỔI BẬT</div>
+                            <div class="blog__main">
+                                <div class="blog__main--img">
+                                    <img src="assets/image/blog/1.jpg" alt="blog">
+                                </div>
+                                <div class="card__info">
+                                    <div class="card__blog--title">
+                                        Trend mới
+                                    </div>
+                                    <div class="card__blog--circle"></div>
+                                    <div class="card__time">
+                                        <div class="time__hour">
+                                            09:11
+                                        </div>
+                                        <div class="time__date">
+                                            11/09/2023
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="blog__subtitle">Những lỗi sai dễ mắc phải khi tự thiết kế nội thất</div>
+                                <div class="blog__desc">Thiếu nhất quán về phong cách, không dự trù được chi phí, không
+                                    gian sống chưa phù hợp là một số lỗi chủ nhà dễ mắc phải khi tự thiết kế nội thất.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog__featured-right">
+                            <div class="blog__featured--title">XEM NHIỀU NHẤT</div>
+                            <a href="blog-chitietblog.html" class="blog__post">
+                                <div class="blog__post--img">
+                                    <img src="/assets/image/blog/2.jpg" alt="blog">
+                                </div>
+                                <div class="blog__post--content">
+                                    <div class="card__info mt-0 mb-0">
+                                        <div class="card__blog--title">
+                                            Kinh nghiệm hay
+                                        </div>
+                                        <div class="card__blog--circle"></div>
+                                        <div class="card__time">
+                                            <div class="time__hour">
+                                                09:11
+                                            </div>
+                                            <div class="time__date">
+                                                11/09/2023
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__title">
+                                        Nghệ Thuật Phối Đồ Nội Thất: Bí Quyết Từ Các Nhà Thiết Kế Nổi Tiếng
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="blog__post">
+                                <div class="blog__post--img">
+                                    <img src="/assets/image/blog/3.jpg" alt="blog">
+                                </div>
+                                <div class="blog__post--content">
+                                    <div class="card__info mt-0 mb-0">
+                                        <div class="card__blog--title">
+                                            Văn hóa
+                                        </div>
+                                        <div class="card__blog--circle"></div>
+                                        <div class="card__time">
+                                            <div class="time__hour">
+                                                09:11
+                                            </div>
+                                            <div class="time__date">
+                                                18/09/2023
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__title">
+                                        Điều đặc biệt trong quan niệm phương Đông khi trang trí phòng ngủ
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog__post">
+                                <div class="blog__post--img">
+                                    <img src="/assets/image/blog/4.jpg" alt="blog">
+                                </div>
+                                <div class="blog__post--content">
+                                    <div class="card__info mt-0 mb-0">
+                                        <div class="card__blog--title">
+                                            Mua gì ở đâu
+                                        </div>
+                                        <div class="card__blog--circle"></div>
+                                        <div class="card__time">
+                                            <div class="time__hour">
+                                                09:18
+                                            </div>
+                                            <div class="time__date">
+                                                18/09/2023
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__title">
+                                        Gợi ý cho cặp đôi mới cưới mua đồ nội thất gia đình
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog__post mb-0">
+                                <div class="blog__post--img">
+                                    <img src="/assets/image/blog/5.jpg" alt="blog">
+                                </div>
+                                <div class="blog__post--content">
+                                    <div class="card__info mt-0 mb-0">
+                                        <div class="card__blog--title">
+                                            Thương hiệu nổi tiếng
+                                        </div>
+                                        <div class="card__blog--circle"></div>
+                                        <div class="card__time">
+                                            <div class="time__hour">
+                                                09:18
+                                            </div>
+                                            <div class="time__date">
+                                                18/09/2023
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__title">
+                                        Bộ sưu tập mới nhất của Hòa Phát ra mắt hôm nay có gì?
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog__bg"></div>
+                <div class="container">
+                    <div class="blog__list">
+                        <div class="blog__list-left">
+                            <div class="blog__featured--title">BÀI VIẾT MỖI NGÀY</div>
+                            <div class="blog__post big">
+                                <div class="blog__post--img">
+                                    <img src="/assets/image/blog/7.jpg" alt="blog">
+                                </div>
+                                <div class="blog__post--content">
+                                    <div class="card__info mt-0 mb-0">
+                                        <div class="card__blog--title">
+                                            Trend mới
+                                        </div>
+                                        <div class="card__blog--circle"></div>
+                                        <div class="card__time">
+                                            <div class="time__hour">
+                                                09:11
+                                            </div>
+                                            <div class="time__date">
+                                                11/09/2023
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__title">
+                                        6 lưu ý khi thiết kế nhà an toàn cho trẻ
+                                    </div>
+                                    <div class="content__desc">Trong thiết kế cần đảm bảo kích thước cửa sổ và ban công
+                                        phù hợp, chọn vật liệu có độ bám cao, trồng cây không độc tố.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog__post big">
+                                <div class="blog__post--img">
+                                    <img src="/assets/image/blog/8.jpg" alt="blog">
+                                </div>
+                                <div class="blog__post--content">
+                                    <div class="card__info mt-0 mb-0">
+                                        <div class="card__blog--title">
+                                            Trend mới
+                                        </div>
+                                        <div class="card__blog--circle"></div>
+                                        <div class="card__time">
+                                            <div class="time__hour">
+                                                09:11
+                                            </div>
+                                            <div class="time__date">
+                                                11/09/2023
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__title">
+                                        Nguyên tắc thiết kế giúp ngôi nhà không bị lỗi thời
+                                    </div>
+                                    <div class="content__desc">Mùa thu đông năm 2022 đánh dấu sự trở lại của thương hiệu
+                                        nội thất uy tín với bộ sưu tập sofa đầy sáng tạo và tinh tế.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog__post big">
+                                <div class="blog__post--img">
+                                    <img src="/assets/image/blog/9.jpg" alt="blog">
+                                </div>
+                                <div class="blog__post--content">
+                                    <div class="card__info mt-0 mb-0">
+                                        <div class="card__blog--title">
+                                            Trend mới
+                                        </div>
+                                        <div class="card__blog--circle"></div>
+                                        <div class="card__time">
+                                            <div class="time__hour">
+                                                09:11
+                                            </div>
+                                            <div class="time__date">
+                                                11/09/2023
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__title">
+                                        Công ty Hải Đăng cung cấp các dịch vụ về nội thất
+                                    </div>
+                                    <div class="content__desc">Doanh nghiệp cung cấp các dịch vụ về thiết kế và thi công
+                                        nội thất đa phong cách với mức giá hợp lý nhờ có nhà xưởng sản...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog__post big">
+                                <div class="blog__post--img">
+                                    <img src="/assets/image/blog/10.jpg" alt="blog">
+                                </div>
+                                <div class="blog__post--content">
+                                    <div class="card__info mt-0 mb-0">
+                                        <div class="card__blog--title">
+                                            Trend mới
+                                        </div>
+                                        <div class="card__blog--circle"></div>
+                                        <div class="card__time">
+                                            <div class="time__hour">
+                                                09:11
+                                            </div>
+                                            <div class="time__date">
+                                                11/09/2023
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__title">
+                                        10 sai lầm decor khiến nhà kém sang
+                                    </div>
+                                    <div class="content__desc">Lựa chọn sai cách trang trí khiến bạn mất nhiều tiền
+                                        nhưng ngôi nhà vẫn không đẹp như mong đợi. Dưới đây là 10 sai lầm..
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog__post big">
+                                <div class="blog__post--img">
+                                    <img src="/assets/image/blog/11.jpg" alt="blog">
+                                </div>
+                                <div class="blog__post--content">
+                                    <div class="card__info mt-0 mb-0">
+                                        <div class="card__blog--title">
+                                            Trend mới
+                                        </div>
+                                        <div class="card__blog--circle"></div>
+                                        <div class="card__time">
+                                            <div class="time__hour">
+                                                09:11
+                                            </div>
+                                            <div class="time__date">
+                                                11/09/2023
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__title">
+                                        Nhiều dự án được vinh danh tại giải thưởng thiết...
+                                    </div>
+                                    <div class="content__desc">3 giải thưởng lớn được trao cho 3 dự án của các sinh viên
+                                        trường Đại học Bách khoa Đà Nẵng, Đại học Xây dựng Hà Nội...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog__post big">
+                                <div class="blog__post--img">
+                                    <img src="/assets/image/blog/12.jpg" alt="blog">
+                                </div>
+                                <div class="blog__post--content">
+                                    <div class="card__info mt-0 mb-0">
+                                        <div class="card__blog--title">
+                                            Trend mới
+                                        </div>
+                                        <div class="card__blog--circle"></div>
+                                        <div class="card__time">
+                                            <div class="time__hour">
+                                                09:11
+                                            </div>
+                                            <div class="time__date">
+                                                11/09/2023
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__title">
+                                        Những thiết kế bếp dành riêng cho căn hộ
+                                    </div>
+                                    <div class="content__desc">Vị trí đặt giường ngủ có vai trò quan trọng để tạo
+                                        ra năng lượng tốt, giúp cải thiện tâm trạng, sức khỏe...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog__post big">
+                                <div class="blog__post--img">
+                                    <img src="/assets/image/blog/13.jpg" alt="blog">
+                                </div>
+                                <div class="blog__post--content">
+                                    <div class="card__info mt-0 mb-0">
+                                        <div class="card__blog--title">
+                                            Trend mới
+                                        </div>
+                                        <div class="card__blog--circle"></div>
+                                        <div class="card__time">
+                                            <div class="time__hour">
+                                                09:11
+                                            </div>
+                                            <div class="time__date">
+                                                11/09/2023
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__title">
+                                        10 xu hướng trang trí nội thất dễ gây 'vỡ mộng'
+                                    </div>
+                                    <div class="content__desc">Bạn có thể lãng phí công sức và tiền bạc nếu
+                                        mải chạy theo xu hướng mà không cân nhắc tình hình thực tế.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog__post big">
+                                <div class="blog__post--img">
+                                    <img src="/assets/image/blog/14.jpg" alt="blog">
+                                </div>
+                                <div class="blog__post--content">
+                                    <div class="card__info mt-0 mb-0">
+                                        <div class="card__blog--title">
+                                            Trend mới
+                                        </div>
+                                        <div class="card__blog--circle"></div>
+                                        <div class="card__time">
+                                            <div class="time__hour">
+                                                09:11
+                                            </div>
+                                            <div class="time__date">
+                                                11/09/2023
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__title">
+                                        Những gợi ý để 'lột xác' ban công
+                                    </div>
+                                    <div class="content__desc">Ngay cả những ban công hay sân thượng nhỏ nhất cũng
+                                        có thể mang lại cảm giác thư thái và bình yên nếu bạn biết cách
+                                        sử...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog__post big">
+                                <div class="blog__post--img">
+                                    <img src="/assets/image/blog/15.jpg" alt="blog">
+                                </div>
+                                <div class="blog__post--content">
+                                    <div class="card__info mt-0 mb-0">
+                                        <div class="card__blog--title">
+                                            Trend mới
+                                        </div>
+                                        <div class="card__blog--circle"></div>
+                                        <div class="card__time">
+                                            <div class="time__hour">
+                                                09:11
+                                            </div>
+                                            <div class="time__date">
+                                                11/09/2023
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__title">
+                                        Những lưu ý về vị trí đặt giường ngủ
+                                    </div>
+                                    <div class="content__desc">Vị trí đặt giường ngủ có vai trò quan trọng để tạo
+                                        ra năng lượng tốt, giúp cải thiện tâm trạng, sức khỏe...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog__post big">
+                                <div class="blog__post--img">
+                                    <img src="/assets/image/blog/16.jpg" alt="blog">
+                                </div>
+                                <div class="blog__post--content">
+                                    <div class="card__info mt-0 mb-0">
+                                        <div class="card__blog--title">
+                                            Trend mới
+                                        </div>
+                                        <div class="card__blog--circle"></div>
+                                        <div class="card__time">
+                                            <div class="time__hour">
+                                                09:11
+                                            </div>
+                                            <div class="time__date">
+                                                11/09/2023
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__title">
+                                        Mang phong cách khách sạn hạng sang vào nhà
+                                    </div>
+                                    <div class="content__desc">Chăm chút cho giường ngủ, treo tranh hay mang hoa và cây
+                                        xanh vào nhà... là cách biến nhà thành nơi nghỉ dưỡng cao cấp.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog__pagination">
+                                <div class="pagination__button">
+                                    <i class="fa-regular fa-chevron-left"></i>
+                                </div>
+                                <div class="pagination__button active">1</div>
+                                <div class="pagination__button">2</div>
+                                <div class="pagination__button">3</div>
+                                <div class="pagination__button">...</div>
+                                <div class="pagination__button">8</div>
+                                <div class="pagination__button">
+                                    <i class="fa-regular fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog__list-right">
+                            <div class="blog__featured--title">XEM NHIỀU NHẤT</div>
+                            <div class="blog__post small">
+                                <div class="blog__post--img">
+                                    <img src="/assets/image/blog/17.jpg" alt="blog">
+                                </div>
+                                <div class="blog__post--content">
+                                    <div class="card__info mt-0 mb-0">
+                                        <div class="card__blog--title">
+                                            Kinh nghiệm hay
+                                        </div>
+                                        <div class="card__blog--circle"></div>
+                                        <div class="card__time">
+                                            <div class="time__hour">
+                                                09:11
+                                            </div>
+                                            <div class="time__date">
+                                                11/09/2023
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__title">
+                                        Nghệ Thuật Phối Đồ Nội Thất: Bí Quyết Từ Các Nhà Thiết Kế Nổi Tiếng
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog__post small">
+                                <div class="blog__post--img">
+                                    <img src="/assets/image/blog/18.jpg" alt="blog">
+                                </div>
+                                <div class="blog__post--content">
+                                    <div class="card__info mt-0 mb-0">
+                                        <div class="card__blog--title">
+                                            Văn hóa
+                                        </div>
+                                        <div class="card__blog--circle"></div>
+                                        <div class="card__time">
+                                            <div class="time__hour">
+                                                09:11
+                                            </div>
+                                            <div class="time__date">
+                                                11/09/2023
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__title">
+                                        Điều đặc biệt trong quan niệm phương Đông khi trang trí phòng ngủ
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog__post small">
+                                <div class="blog__post--img">
+                                    <img src="/assets/image/blog/19.jpg" alt="blog">
+                                </div>
+                                <div class="blog__post--content">
+                                    <div class="card__info mt-0 mb-0">
+                                        <div class="card__blog--title">
+                                            Mua gì ở đâu
+                                        </div>
+                                        <div class="card__blog--circle"></div>
+                                        <div class="card__time">
+                                            <div class="time__hour">
+                                                09:11
+                                            </div>
+                                            <div class="time__date">
+                                                11/09/2023
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__title">
+                                        Gợi ý cho cặp đôi mới cưới mua đồ nội thất gia đình
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog__post small">
+                                <div class="blog__post--img">
+                                    <img src="/assets/image/blog/20.jpg" alt="blog">
+                                </div>
+                                <div class="blog__post--content">
+                                    <div class="card__info mt-0 mb-0">
+                                        <div class="card__blog--title">
+                                            Thương hiệu nổi tiếng
+                                        </div>
+                                        <div class="card__blog--circle"></div>
+                                        <div class="card__time">
+                                            <div class="time__hour">
+                                                09:11
+                                            </div>
+                                            <div class="time__date">
+                                                11/09/2023
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__title">
+                                        Bộ sưu tập mới nhất của Hòa Phát ra mắt hôm nay có gì?
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrap">
+                    <div class="footer__col">
+                        <h3 class="footer__title">
+                            Nội thất Hoàng Gia
+                        </h3>
+                        <p class="footer__text">
+                            Nội thất Hoàng Gia là thương hiệu đến từ Savimex với gần 40 năm kinh nghiệm trong việc sản
+                            xuất và xuất khẩu nội thất đạt chuẩn quốc tế.
+                        </p>
+                    </div>
+                    <div class="footer__col">
+                        <h3 class="footer__title">
+                            Dịch vụ
+                        </h3>
+                        <ul class="footer__list">
+                            <li><a href="#" class="link">Chính sách Bán hàng</a></li>
+                            <li><a href="#" class="link">Chính sách Giao hàng & Lắp đặt</a></li>
+                            <li><a href="#" class="link">Chính sách Đổi trả</a></li>
+                            <li><a href="#" class="link">Chính sách Bảo hành & Bảo trì</a></li>
+                            <li><a href="#" class="link">Chính sách Đối tác Bán hàng</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3 class="footer__title">
+                            Thông tin liên hệ
+                        </h3>
+                        <ul class="footer__list">
+                            <li><a href="#" class="link"><i class="fa-sharp fa-solid fa-location-dot"></i>Showroom: 96
+                                    Định Công - Hoàng Mai - Hà Nội</a></li>
+                            <li><a href="#" class="link"><i class="fa-solid fa-phone"></i>0123456789</a></li>
+                            <li><a href="#" class="link"><i class="fa-solid fa-envelope"></i>cskh@contact.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3 class="footer__title">
+                            Mạng xã hội
+                        </h3>
+                        <div class="footer__social">
+                            <a href="#" class="footer__social--item">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="footer__social--item">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="#" class="footer__social--item">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__copyright">
+                    Copyright © 2023 Nội thất Hoàng Gia
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

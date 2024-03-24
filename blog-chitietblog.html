@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết Blog</title>
+    <link rel="stylesheet"
+        href="https://redpervn.github.io/fa/css/all.min.css?fbclid=IwAR2VnCVu3fZyZybhEPHqAoRF9xJd2ZJZ43gCLfQokvfv6X5YJv1_V3HNSyw">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="overlay" onclick="hideOverlayMobile()"></div>
+        <header class="header">
+            <div class="container">
+                <div class="header__wrap">
+                    <a href="/trangchu-dadangnhap.html" class="logo">
+                        <img class="desktop" src="assets/image/logo.svg" alt="logo image">
+                        <img class="mobile" src="assets/image/logo-mb.svg" alt="logo image">
+                    </a>
+                    <ul class="menu">
+                        <li><a class="link active" href="trangchu-dadangnhap.html">Trang chủ</a></li>
+                        <li><a class="link" href="tatcasanpham.html">Sản phẩm</a></li>
+                        <li><a class="link" href="vechungtoi.html">Về chúng tôi</a></li>
+                        <li><a class="link" href="blog.html">Blog</a></li>
+                    </ul>
+                    <div class="search__desktop">
+                        <input type="text" placeholder="Tìm kiếm..." onkeydown="checkEnter(event)">
+                        <i onclick="search()" class="fa-regular fa-magnifying-glass"></i>
+                    </div>
+                    <div class="user">
+                        <a href="giohang.html" class="user__function link">
+                            <i class="fa-regular fa-cart-shopping"></i>
+                        </a>
+                        <a href="yeuthich.html" class="user__function link">
+                            <i class="fa-regular fa-heart"></i>
+                        </a>
+                        <div class="user__function function">
+                            <div class="user__info">
+                                <img src="./assets/image/avatar-header.png" alt="avatar">
+                                <div class="user__info--name">Đạt Mai</div>
+                            </div>
+                            <div class="popup-user">
+                                <a href="taikhoan-khongcothongtin.html " class="popup-user__item">
+                                    <i class="fa-regular fa-user"></i>
+                                    <p>Thông tin cá nhân</p>
+                                </a>
+                                <a href="lichsumuahang.html" class="popup-user__item">
+                                    <i class="fa-regular fa-cart-shopping"></i>
+                                    <p class="ml-2">Lịch sử mua hàng</p>
+                                </a>
+                                <a href="/" class="popup-user__item logout">
+                                    <i class="fa-regular fa-right-from-bracket"></i>
+                                    <p>Đăng xuất</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="menu__bars" onclick="toggleMenu()">
+                            <i class="fa-regular fa-bars"></i>
+                            <i class="fa-regular fa-xmark"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__mobile">
+                    <div class="search__mobile">
+                        <input type="text" placeholder="Tìm kiếm..." onkeydown="checkEnter(event)">
+                        <i onclick="search()" class="fa-regular fa-magnifying-glass"></i>
+                    </div>
+                    <div class="divider"></div>
+                    <ul class="menu__mobile">
+                        <li><a class="link active" href="trangchu-dadangnhap.html">Trang chủ</a></li>
+                        <li><a class="link" href="tatcasanpham.html">Sản phẩm</a></li>
+                        <li><a class="link" href="vechungtoi.html">Về chúng tôi</a></li>
+                        <li><a class="link" href="blog.html">Blog</a></li>
+                        <div class="divider"></div>
+                        <li><a class="link" href="taikhoan-khongcothongtin.html">Thông tin cá nhân</a></li>
+                        <li><a class="link" href="lichsumuahang.html">Lịch sử mua hàng</a></li>
+                        <li><a class="link red" href="/">Đăng xuất</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="main">
+            <div class="breadcrumb">
+                <div class="container">
+                    <div class="breadcrumb__link">
+                        <a href="blog.html">Blog</a>
+                        <span>/</span>
+                        <a href="blog.html">Kinh nghiệm hay</a>
+                        <span>/</span>
+                        <p>Nghệ Thuật Phối Đồ Nội Thất: Bí Quyết Từ Các Nhà Thiết Kế Nổi Tiếng</p>
+                    </div>
+                </div>
+            </div>
+            <div class="blog__detail">
+                <div class="container">
+                    <div class="card__info mt-0">
+                        <div class="card__blog--title">
+                            Kinh nghiệm hay
+                        </div>
+                        <div class="card__blog--circle"></div>
+                        <div class="card__time">
+                            <div class="time__hour">
+                                09:18
+                            </div>
+                            <div class="time__date">
+                                18/09/2023
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog__detail--title">
+                        Nghệ Thuật Phối Đồ Nội Thất: Bí Quyết Từ Các Nhà Thiết Kế Nổi Tiếng
+                    </div>
+                    <div class="blog__detail--text mb-30">Ngày nay, nội thất không chỉ đơn thuần là việc bày trí không
+                        gian mà
+                        còn trở thành một nghệ thuật đầy sáng tạo. Các nhà thiết kế nội thất nổi tiếng trên khắp thế
+                        giới đã khẳng định sự độc đáo và tinh tế của họ thông qua cách phối đồ nội thất độc đáo. Họ
+                        không chỉ tạo nên những không gian sống đẹp mắt mà còn tạo ra những câu chuyện riêng, đem đến
+                        trải nghiệm thú vị và độc đáo cho chủ nhân. Chúng ta hãy cùng khám phá những bí quyết phối đồ
+                        nội thất từ các nhà thiết kế xuất sắc nhất.
+                    </div>
+                    <div class="blog__detail-wrap">
+                        <div class="blog__detail-left">
+                            <img class="mb-30" src="assets/image/blog/big.jpg" alt="blog detail">
+                            <div class="blog__detail--post">1. Mario Bellini</div>
+                            <div class="blog__detail--text mb-30">Mario Bellini, một nhà thiết kế nội thất và kiến trúc
+                                sư nổi tiếng người Ý,
+                                luôn tạo nên sự nhất quán trong không gian bằng cách duy trì một chủ đề chung. Ông
+                                thường sử dụng các màu sắc và chất liệu tương tự để tạo ra một liên kết thị giác mạnh mẽ
+                                trong từng góc của ngôi nhà. Chính bởi vậy, phòng khách, phòng ngủ và khu bếp đều tạo
+                                nên một câu chuyện liền mạch nhưng vẫn độc đáo và đầy màu sắc.
+                            </div>
+                            <img class="mb-30" src="assets/image/blog/big-2.jpg" alt="blog detail">
+                            <div class="blog__detail--post">2. Kelly Wearstler</div>
+                            <div class="blog__detail--text mb-30">Kelly Wearstler, nhà thiết kế nội thất và nhà kiến
+                                trúc người Mỹ, nổi tiếng với việc tạo ra sự cân bằng giữa các yếu tố trong không gian.
+                                Bằng cách kết hợp những mảng màu sắc tương phản, các vật trang trí độc đáo và những họa
+                                tiết độc đáo, cô tạo ra sự hài hòa và sự phá cách đồng thời trong mỗi dự án.
+                            </div>
+                            <img class="mb-30" src="assets/image/blog/big-3.jpg" alt="blog detail">
+                            <div class="blog__detail--post">3. Philippe Starck</div>
+                            <div class="blog__detail--text mb-30">Philippe Starck, một nhà thiết kế nội thất và sản phẩm
+                                nổi tiếng người Pháp, thường được biết đến với sự táo bạo và sáng tạo trong các thiết kế
+                                của mình. Ông thường kết hợp các vật trang trí và nội thất không chỉ dựa vào nguyên tắc
+                                thẩm mỹ truyền thống mà còn dựa vào cảm hứng và cảm xúc. Điều này giúp tạo ra những
+                                không gian độc đáo và nổi bật.
+                            </div>
+                            <img class="mb-30" src="assets/image/blog/big-4.jpg" alt="blog detail">
+                            <div class="blog__detail--post">4. Patricia Urquiola</div>
+                            <div class="blog__detail--text mb-30">Patricia Urquiola, một nhà thiết kế nội thất người Tây
+                                Ban Nha, thường tạo ra sự lớp lớp sâu sắc trong không gian thông qua việc kết hợp các
+                                chất liệu và vật liệu đa dạng. Bằng cách sử dụng các loại gỗ, kim loại, và vải vóc khác
+                                nhau, cô tạo ra những không gian phức tạp, giàu cảm xúc và đa chiều.
+                            </div>
+                            <img class="mb-30" src="assets/image/blog/big-5.jpg" alt="blog detail">
+                            <div class="blog__detail--text mb-30">Trong thế giới nội thất đầy màu sắc và sáng tạo, các
+                                nhà thiết kế nổi tiếng đã khẳng định sự độc đáo và tinh tế thông qua cách phối đồ nội
+                                thất. Họ đã chứng minh rằng, ngoài việc tạo ra những không gian đẹp mắt, nội thất còn là
+                                một ngôn ngữ nghệ thuật có thể kể chuyện và thể hiện cá tính của người sáng tạo.
+                            </div>
+                            <div class="blog__detail--show">
+                                <div class="show__title">>>> Xem thêm:</div>
+                                <div class="show__post">Gợi ý cho cặp đôi mới cưới mua đồ nội thất gia đình</div>
+                                <div class="show__post">Bộ sưu tập mới nhất của Hòa Phát ra mắt hôm nay có gì?</div>
+                                <div class="show__post">Điều đặc biệt trong quan niệm phương Đông khi trang trí phòng
+                                    ngủ</div>
+                            </div>
+                        </div>
+                        <div class="blog__detail-right">
+                            <div class="blog__detail--subtitle">XEM NHIỀU NHẤT</div>
+                            <a href="blog-chitietblog.html" class="blog__post small">
+                                <div class="blog__post--img">
+                                    <img src="/assets/image/blog/2.jpg" alt="blog">
+                                </div>
+                                <div class="blog__post--content">
+                                    <div class="card__info mt-0 mb-0">
+                                        <div class="card__blog--title">
+                                            Kinh nghiệm hay
+                                        </div>
+                                        <div class="card__blog--circle"></div>
+                                        <div class="card__time">
+                                            <div class="time__hour">
+                                                09:11
+                                            </div>
+                                            <div class="time__date">
+                                                11/09/2023
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__title">
+                                        Nghệ Thuật Phối Đồ Nội Thất: Bí Quyết Từ Các Nhà Thiết Kế Nổi Tiếng
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="blog__post small">
+                                <div class="blog__post--img">
+                                    <img src="/assets/image/blog/3.jpg" alt="blog">
+                                </div>
+                                <div class="blog__post--content">
+                                    <div class="card__info mt-0 mb-0">
+                                        <div class="card__blog--title">
+                                            Văn hóa
+                                        </div>
+                                        <div class="card__blog--circle"></div>
+                                        <div class="card__time">
+                                            <div class="time__hour">
+                                                09:11
+                                            </div>
+                                            <div class="time__date">
+                                                18/09/2023
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__title">
+                                        Điều đặc biệt trong quan niệm phương Đông khi trang trí phòng ngủ
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog__post small">
+                                <div class="blog__post--img">
+                                    <img src="/assets/image/blog/4.jpg" alt="blog">
+                                </div>
+                                <div class="blog__post--content">
+                                    <div class="card__info mt-0 mb-0">
+                                        <div class="card__blog--title">
+                                            Mua gì ở đâu
+                                        </div>
+                                        <div class="card__blog--circle"></div>
+                                        <div class="card__time">
+                                            <div class="time__hour">
+                                                09:18
+                                            </div>
+                                            <div class="time__date">
+                                                18/09/2023
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__title">
+                                        Gợi ý cho cặp đôi mới cưới mua đồ nội thất gia đình
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog__post mb-0 small">
+                                <div class="blog__post--img">
+                                    <img src="/assets/image/blog/5.jpg" alt="blog">
+                                </div>
+                                <div class="blog__post--content">
+                                    <div class="card__info mt-0 mb-0">
+                                        <div class="card__blog--title">
+                                            Thương hiệu nổi tiếng
+                                        </div>
+                                        <div class="card__blog--circle"></div>
+                                        <div class="card__time">
+                                            <div class="time__hour">
+                                                09:18
+                                            </div>
+                                            <div class="time__date">
+                                                18/09/2023
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__title">
+                                        Bộ sưu tập mới nhất của Hòa Phát ra mắt hôm nay có gì?
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog__detail--suggest">
+                        <div class="suggest__title">
+                            <div class="suggest__title--main">CÓ THỂ BẠN QUAN TÂM</div>
+                            <a href="blog.html">Xem thêm</a>
+                        </div>
+                        <div class="list__cards">
+                            <div class="card">
+                                <a href="#" class="card__img">
+                                    <img src="assets/image/blog-1.jpg" alt="card image">
+                                </a>
+                                <div class="card__bg card__bg--blog">
+                                    <div class="card__info">
+                                        <div class="card__blog--title">
+                                            Trend mới
+                                        </div>
+                                        <div class="card__blog--circle"></div>
+                                        <div class="card__time">
+                                            <div class="time__hour">
+                                                09:11
+                                            </div>
+                                            <div class="time__date">
+                                                11/09/2023
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="card__name title">
+                                        Thiết kế không gian sống hiện đại với tấm laminate
+                                    </a>
+                                    <p class="card__text mt-10">
+                                        Tấm laminate đáp ứng đa dạng nhu cầu người tiêu dùng bởi mẫu mã phong
+                                        phú, cập
+                                        nhật xu hướng, phù hợp làm bàn ghế, ...
+                                    </p>
+                                    <div class="card__view">Số lượt xem: 1109</div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#" class="card__img">
+                                    <img src="assets/image/blog-2.jpg" alt="card image">
+                                </a>
+                                <div class="card__bg card__bg--blog">
+                                    <div class="card__info">
+                                        <div class="card__blog--title">
+                                            Không gian sống
+                                        </div>
+                                        <div class="card__blog--circle"></div>
+                                        <div class="card__time">
+                                            <div class="time__hour">
+                                                10:12
+                                            </div>
+                                            <div class="time__date">
+                                                11/09/2023
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="card__name title">
+                                        6 lưu ý khi thiết kế nhà an toàn cho trẻ
+                                    </a>
+                                    <p class="card__text mt-10">
+                                        Trong thiết kế cần đảm bảo kích thước cửa sổ và ban công phù hợp, chọn
+                                        vật liệu
+                                        có độ bám cao, trồng cây không độc tố.
+                                    </p>
+                                    <div class="card__view">Số lượt xem: 202</div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#" class="card__img">
+                                    <img src="assets/image/blog-3.jpg" alt="card image">
+                                </a>
+                                <div class="card__bg card__bg--blog">
+                                    <div class="card__info">
+                                        <div class="card__blog--title">
+                                            Không gian sống
+                                        </div>
+                                        <div class="card__blog--circle"></div>
+                                        <div class="card__time">
+                                            <div class="time__hour">
+                                                12:12
+                                            </div>
+                                            <div class="time__date">
+                                                11/09/2023
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="card__name title">
+                                        Nguyên tắc thiết kế giúp ngôi nhà không bị lỗi thời
+                                    </a>
+                                    <p class="card__text mt-10">
+                                        Gia chủ có thể sử dụng tone màu trung tính, chọn vật liệu bền vững,
+                                        trồng cây
+                                        xanh để ngôi nhà không nhanh lỗi thời.
+                                    </p>
+                                    <div class="card__view">Số lượt xem: 509</div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#" class="card__img">
+                                    <img src="assets/image/blog-4.jpg" alt="card image">
+                                </a>
+                                <div class="card__bg card__bg--blog">
+                                    <div class="card__info">
+                                        <div class="card__blog--title">
+                                            Không gian sống
+                                        </div>
+                                        <div class="card__blog--circle"></div>
+                                        <div class="card__time">
+                                            <div class="time__hour">
+                                                15:12
+                                            </div>
+                                            <div class="time__date">
+                                                11/09/2023
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="card__name title">
+                                        Những lỗi sai dễ mắc phải khi tự thiết kế nội thất
+                                    </a>
+                                    <p class="card__text mt-10">
+                                        Thiếu nhất quán về phong cách, không dự trù được chi phí, không gian
+                                        sống chưa
+                                        phù hợp là một số lỗi chủ nhà dễ mắc phải khi tự...
+                                    </p>
+                                    <div class="card__view">Số lượt xem: 159</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrap">
+                    <div class="footer__col">
+                        <h3 class="footer__title">
+                            Nội thất Hoàng Gia
+                        </h3>
+                        <p class="footer__text">
+                            Nội thất Hoàng Gia là thương hiệu đến từ Savimex với gần 40 năm kinh nghiệm trong việc sản
+                            xuất và xuất khẩu nội thất đạt chuẩn quốc tế.
+                        </p>
+                    </div>
+                    <div class="footer__col">
+                        <h3 class="footer__title">
+                            Dịch vụ
+                        </h3>
+                        <ul class="footer__list">
+                            <li><a href="#" class="link">Chính sách Bán hàng</a></li>
+                            <li><a href="#" class="link">Chính sách Giao hàng & Lắp đặt</a></li>
+                            <li><a href="#" class="link">Chính sách Đổi trả</a></li>
+                            <li><a href="#" class="link">Chính sách Bảo hành & Bảo trì</a></li>
+                            <li><a href="#" class="link">Chính sách Đối tác Bán hàng</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3 class="footer__title">
+                            Thông tin liên hệ
+                        </h3>
+                        <ul class="footer__list">
+                            <li><a href="#" class="link"><i class="fa-sharp fa-solid fa-location-dot"></i>Showroom: 96
+                                    Định Công - Hoàng Mai - Hà Nội</a></li>
+                            <li><a href="#" class="link"><i class="fa-solid fa-phone"></i>0123456789</a></li>
+                            <li><a href="#" class="link"><i class="fa-solid fa-envelope"></i>cskh@contact.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3 class="footer__title">
+                            Mạng xã hội
+                        </h3>
+                        <div class="footer__social">
+                            <a href="#" class="footer__social--item">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="footer__social--item">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="#" class="footer__social--item">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__copyright">
+                    Copyright © 2023 Nội thất Hoàng Gia
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

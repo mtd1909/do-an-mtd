@@ -1,0 +1,27 @@
+.favorite {
+    padding: 60px 0 90px 0;
+    .list__cards {
+        .card {
+            .card__img--delete {
+                width: 28px;
+                height: 28px;
+                border-radius: 50%;
+                background: var(--neutral-500);
+                position: absolute;
+                top: 12px;
+                right: 12px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                i {
+                    color: white;
+                }
+            }
+            .card__info--icon {
+                i {
+                    color: var(--secondary-500);
+                }
+            }
+        }
+    }
+}

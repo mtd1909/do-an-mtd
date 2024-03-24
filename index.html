@@ -15,33 +15,54 @@
 
 <body>
     <div class="wrapper">
+        <div class="overlay" onclick="hideOverlayMobile()"></div>
         <header class="header">
             <div class="container">
                 <div class="header__wrap">
-                    <a href="/do-an-mtd/" class="logo">
-                        <img src="assets/image/logo.svg" alt="logo image">
+                    <a href="/" class="logo">
+                        <img class="desktop" src="assets/image/logo.svg" alt="logo image">
+                        <img class="mobile" src="assets/image/logo-mb.svg" alt="logo image">
                     </a>
                     <ul class="menu">
-                        <li><a class="link active" href="index.html">Trang chủ</a></li>
+                        <li><a class="link active" href="trangchu-dadangnhap.html">Trang chủ</a></li>
                         <li><a class="link" href="tatcasanpham.html">Sản phẩm</a></li>
                         <li><a class="link" href="vechungtoi.html">Về chúng tôi</a></li>
                         <li><a class="link" href="blog.html">Blog</a></li>
                     </ul>
-                    <div class="search">
-                        <input type="text" placeholder="Tìm kiếm...">
-                        <i class="fa-regular fa-magnifying-glass"></i>
+                    <div class="search__desktop">
+                        <input type="text" placeholder="Tìm kiếm..." onkeydown="checkEnter(event)">
+                        <i onclick="search()" class="fa-regular fa-magnifying-glass"></i>
                     </div>
                     <div class="user">
                         <a href="giohang.html" class="user__function link">
                             <i class="fa-regular fa-cart-shopping"></i>
                         </a>
-                        <a href="#" class="user__function link">
+                        <a href="yeuthich.html" class="user__function link">
                             <i class="fa-regular fa-heart"></i>
                         </a>
-                        <a href="dangnhap.html" class="user__function link">
-                            <i class="fa-regular fa-right-to-bracket"></i>
+                        <a href="yeuthich.html" class="user__function link">
+                            <i class="fa-regular fa-user"></i>
                         </a>
+                        <div class="menu__bars" onclick="toggleMenu()">
+                            <i class="fa-regular fa-bars"></i>
+                            <i class="fa-regular fa-xmark"></i>
+                        </div>
                     </div>
+                </div>
+                <div class="header__mobile">
+                    <div class="search__mobile">
+                        <input type="text" placeholder="Tìm kiếm..." onkeydown="checkEnter(event)">
+                        <i onclick="search()" class="fa-regular fa-magnifying-glass"></i>
+                    </div>
+                    <div class="divider"></div>
+                    <ul class="menu__mobile">
+                        <li><a class="link active" href="trangchu-dadangnhap.html">Trang chủ</a></li>
+                        <li><a class="link" href="tatcasanpham.html">Sản phẩm</a></li>
+                        <li><a class="link" href="vechungtoi.html">Về chúng tôi</a></li>
+                        <li><a class="link" href="blog.html">Blog</a></li>
+                        <div class="divider"></div>
+                        <li><a class="link" href="trangchu-dadangnhap.html">Đăng nhập</a></li>
+                    </ul>
                 </div>
             </div>
         </header>
@@ -50,7 +71,8 @@
                 <div class="hero">
                     <div class="container">
                         <div class="hero__content">
-                            <img class="hero__content--title" src="assets/image/hero-title.svg" alt="">
+                            <img class="hero__content--title desktop" src="assets/image/hero-title.svg" alt="">
+                            <img class="hero__content--title mobile" src="assets/image/hero-title-mobile.svg" alt="">
                             <p class="hero__content--text">
                                 Chào mừng bạn đến với Decor Home - Nơi mang đến cho gia đình bạn không gian ấm cúng và
                                 phong cách. Khám phá ngay để tìm kiếm những sản phẩm nội thất độc đáo và chất lượng,
@@ -64,7 +86,7 @@
                     <div class="container">
                         <div class="home__section--header">
                             <h2>Ưu đãi giới hạn</h2>
-                            <a href="#">Xem thêm</a>
+                            <a href="tatcasanpham.html">Xem thêm</a>
                         </div>
                         <div class="list__cards">
                             <div class="card">
@@ -141,7 +163,7 @@
                                     </div>
                                 </a>
                                 <a href="#" class="card__name">
-                                    Tủ Quần Áo Gỗ Kệ Ngăn
+                                    Tủ Quần Áo 1 Cánh Gỗ Thông
                                 </a>
                                 <div class="card__info">
                                     <div class="card__info--price">
@@ -174,7 +196,7 @@
                                     </div>
                                 </a>
                                 <a href="#" class="card__name">
-                                    Ghế Sofa Gỗ Tràm Tự Nhiên
+                                    Ghế Sofa Gỗ Sồi Cao Cấp
                                 </a>
                                 <div class="card__info">
                                     <div class="card__info--price">
@@ -240,7 +262,7 @@
                                     </div>
                                 </a>
                                 <a href="#" class="card__name">
-                                    Ghế Ăn Gỗ Óc Chó Tự Nhiên
+                                    Ghế Phòng Ăn Gỗ Sồi Cao Cấp
                                 </a>
                                 <div class="card__info">
                                     <div class="card__info--price">
@@ -273,7 +295,7 @@
                                     </div>
                                 </a>
                                 <a href="#" class="card__name">
-                                    Ghế Ăn Gỗ Sồi Tự Nhiên
+                                    Ghế Ăn Gỗ Cao Su Tự Nhiên
                                 </a>
                                 <div class="card__info">
                                     <div class="card__info--price">
@@ -339,7 +361,7 @@
                     <div class="container">
                         <div class="home__section--header">
                             <h2>Sản phẩm bán chạy</h2>
-                            <a href="#">Xem thêm</a>
+                            <a href="tatcasanpham.html">Xem thêm</a>
                         </div>
                         <div class="list__cards">
                             <div class="card">
@@ -383,7 +405,7 @@
                                     </div>
                                 </a>
                                 <a href="#" class="card__name">
-                                    Ghế Ăn Gỗ Óc Chó Tự Nhiên
+                                    Ghế Phòng Ăn Gỗ Sồi Cao Cấp
                                 </a>
                                 <div class="card__info">
                                     <div class="card__info--price">
@@ -416,7 +438,7 @@
                                     </div>
                                 </a>
                                 <a href="#" class="card__name">
-                                    Ghế Ăn Gỗ Sồi Tự Nhiên
+                                    Ghế Ăn Gỗ Cao Su Tự Nhiên
                                 </a>
                                 <div class="card__info">
                                     <div class="card__info--price">
@@ -476,6 +498,39 @@
                             </div>
                             <div class="card">
                                 <a href="#" class="card__img">
+                                    <img src="assets/image/tu-quan-ao-go.jpg" alt="card image">
+                                    <div class="card__img--sale">
+                                        Giảm giá
+                                    </div>
+                                </a>
+                                <a href="#" class="card__name">
+                                    Tủ Quần Áo 1 Cánh Gỗ Thông
+                                </a>
+                                <div class="card__info">
+                                    <div class="card__info--price">
+                                        <div class="price__new">8.090.000đ</div>
+                                        <div class="price__old">11.499.000đ</div>
+                                    </div>
+                                    <div class="card__info--icon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div>
+                                </div>
+                                <div class="card__info">
+                                    <div class="card__info--rate">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <div class="rate__times">(33)</div>
+                                    </div>
+                                    <div class="card__info--sold">
+                                        Đã bán 382
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#" class="card__img">
                                     <img src="assets/image/ghe-an-cao-su.jpg" alt="card image">
                                     <div class="card__img--sale">
                                         Giảm giá
@@ -515,7 +570,7 @@
                                     </div>
                                 </a>
                                 <a href="#" class="card__name">
-                                    Ghế Sofa Gỗ Tràm Tự Nhiên
+                                    Ghế Sofa Gỗ Sồi Cao Cấp
                                 </a>
                                 <div class="card__info">
                                     <div class="card__info--price">
@@ -537,39 +592,6 @@
                                     </div>
                                     <div class="card__info--sold">
                                         Đã bán 454
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <a href="#" class="card__img">
-                                    <img src="assets/image/tu-quan-ao-go.jpg" alt="card image">
-                                    <div class="card__img--sale">
-                                        Giảm giá
-                                    </div>
-                                </a>
-                                <a href="#" class="card__name">
-                                    Tủ Quần Áo Gỗ Kệ Ngăn
-                                </a>
-                                <div class="card__info">
-                                    <div class="card__info--price">
-                                        <div class="price__new">8.090.000đ</div>
-                                        <div class="price__old">11.499.000đ</div>
-                                    </div>
-                                    <div class="card__info--icon">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </div>
-                                </div>
-                                <div class="card__info">
-                                    <div class="card__info--rate">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
-                                        <div class="rate__times">(33)</div>
-                                    </div>
-                                    <div class="card__info--sold">
-                                        Đã bán 382
                                     </div>
                                 </div>
                             </div>
@@ -790,7 +812,7 @@
                     <div class="container">
                         <div class="home__section--header">
                             <h2>Blog</h2>
-                            <a href="#">Xem thêm</a>
+                            <a href="blog.html">Xem thêm</a>
                         </div>
                         <div class="list__cards">
                             <div class="card">

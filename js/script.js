@@ -28,3 +28,31 @@ const showPopupDiscount = () => {
 const showSuccess = () => {
     overlaySuccess.classList.add('active')
 }
+
+function checkEnter(event) {
+    if (event.key === "Enter") {
+        window.location.href = 'timkiem.html'
+    }
+}
+
+function search() {
+    window.location.href = 'timkiem.html'
+}
+
+const toggleMenu = () => {
+    const headerMobile = document.querySelector('.header__mobile')
+    const menuBar = document.querySelector('.menu__bars')
+    const overlay = document.querySelector('.overlay')
+    headerMobile.classList.toggle('show')
+    menuBar.classList.toggle('show')
+    overlay.classList.toggle('show')
+}
+
+const hideOverlayMobile = () => {
+    const headerMobile = document.querySelector('.header__mobile')
+    const menuBar = document.querySelector('.menu__bars')
+    const overlay = document.querySelector('.overlay')
+    headerMobile.classList.remove('show')
+    menuBar.classList.remove('show')
+    overlay.classList.remove('show')
+}
