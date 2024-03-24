@@ -6,10 +6,17 @@
             align-items: center;
             justify-content: space-between;
             margin-bottom: 30px;
+            @media (max-width: 767px) {
+                margin-bottom: 12px;
+            }
             h2 {
                 font-size: 28px;
-                font-weight: 600;
+                font-weight: 700;
                 text-transform: uppercase;
+                @media (max-width: 767px) {
+                   font-size: 18px;
+                   font-weight: 500; 
+                }
             }
             a {
                 color: var(--secondary-500);

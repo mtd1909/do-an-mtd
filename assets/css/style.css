@@ -98,10 +98,21 @@
   justify-content: space-between;
   margin-bottom: 30px;
 }
+@media (max-width: 767px) {
+  .home .home__section .home__section--header {
+    margin-bottom: 12px;
+  }
+}
 .home .home__section .home__section--header h2 {
   font-size: 28px;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .home .home__section .home__section--header h2 {
+    font-size: 18px;
+    font-weight: 500;
+  }
 }
 .home .home__section .home__section--header a {
   color: var(--secondary-500);
@@ -2584,9 +2595,19 @@ img {
 .pt-90 {
   padding-top: 90px;
 }
+@media (max-width: 767px) {
+  .pt-90 {
+    padding-top: 30px;
+  }
+}
 
 .pb-90 {
   padding-bottom: 90px;
+}
+@media (max-width: 767px) {
+  .pb-90 {
+    padding-bottom: 30px;
+  }
 }
 
 .main {
@@ -2815,7 +2836,10 @@ input, select {
 }
 @media (max-width: 499px) {
   .list__cards .card .card__name {
-    min-height: 42px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
   }
 }
 .list__cards .card .card__name.title {

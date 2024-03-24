@@ -144,9 +144,15 @@ img {
 
 .pt-90 {
     padding-top: 90px;
+    @media (max-width: 767px) {
+        padding-top: 30px;
+    }
 }
 .pb-90 {
     padding-bottom: 90px;
+    @media (max-width: 767px) {
+        padding-bottom: 30px;
+    }
 }
 
 .main {
@@ -356,7 +362,10 @@ input, select {
                 margin: 4px 0;
             }
             @media (max-width: 499px) {
-                min-height: 42px;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
             }
             &.title {
                 font-size: 20px;
