@@ -217,7 +217,7 @@ input[type="text"], input[type="password"], input[type="number"] {
     border: 1px solid var(--neutral-100);
     width: 100%;
     height: 48px;
-    padding-left: 24px;
+    padding-left: 16px;
     border-radius: 4px;
     font-size: 16px;
 }
@@ -237,6 +237,9 @@ input, select {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
+    @media (max-width: 991px) {
+        gap: 16px;
+    }
     @media (max-width: 767px) {
         gap: 8px;
     }
@@ -244,7 +247,7 @@ input, select {
         width: calc((100% - 90px) / 4);
         border-radius: 6px;
         @media (max-width: 991px) {
-            width: calc((100% - 30px) / 2);
+            width: calc((100% - 16px) / 2);
         }
         @media (max-width: 767px) {
             width: calc((100% - 8px) / 2);
@@ -254,7 +257,43 @@ input, select {
                 color: var(--secondary-500);
             }
         }
+        &.card__blog {
+            @media (max-width: 991px) {
+                .card__bg.card__bg--blog {
+                    padding-top: 8px;
+                    .card__info {
+                        margin-bottom: 8px;
+                    }
+                    .card__name.title {
+                        font-size: 18px;
+                        display: block;
+                    }
+                    .card__text.mt-10 {
+                        margin-top: 8px;
+                    }
+                }
+            }
+            @media (max-width: 575px) {
+                width: 100%;
+                padding-bottom: 16px;
+                margin-bottom: 8px;
+                border-bottom: 1px solid var(--neutral-100);
+                border-radius: 0;
+                &:last-child {
+                    margin-bottom: 0;
+                    border: none;
+                    padding-bottom: 0;
+                }
+            }
+        }
         &.feedback {
+            @media (max-width: 575px) {
+                width: 100%;
+                margin-bottom: 8px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
             &:hover {
                 .card__name {
                     color: var(--text);
@@ -264,6 +303,15 @@ input, select {
                 border: 1px solid var(--neutral-100);
                 border-top: transparent;
                 border-radius: 0 0 6px 6px;
+                @media (max-width: 991px) {
+                    padding: 8px;
+                }
+                .card__text {
+                    @media (max-width: 991px) {
+                        font-size: 16px;
+                        min-height: unset;
+                    }
+                }
             }
             .card__img {
                 border-radius: 6px 6px 0 0;
@@ -329,6 +377,7 @@ input, select {
                 @media (max-width: 767px) {
                     padding: 4px 12px;
                     font-size: 10px;
+                    top: 10px;
                 }
             }
             img {

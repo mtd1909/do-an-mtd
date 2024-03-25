@@ -134,17 +134,58 @@
   background-repeat: no-repeat;
   height: 600px;
 }
+@media (max-width: 991px) {
+  .home .home__section .home__support.desktop {
+    display: none;
+  }
+}
+.home .home__section .home__support.mobile {
+  display: none;
+}
+@media (max-width: 991px) {
+  .home .home__section .home__support.mobile {
+    display: flex;
+  }
+}
+@media (max-width: 991px) {
+  .home .home__section .home__support {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 16px;
+  }
+}
 .home .home__section .home__support .home__support--left h2 {
   font-size: 48px;
   font-weight: 600;
   margin-bottom: 16px;
   color: var(--brand-500);
+  text-transform: uppercase;
+}
+@media (max-width: 991px) {
+  .home .home__section .home__support .home__support--left h2 {
+    margin-top: 60px;
+    font-size: 30px;
+    margin-bottom: 8px;
+    text-align: center;
+  }
 }
 .home .home__section .home__support .home__support--left p {
   font-size: 18px;
 }
+@media (max-width: 991px) {
+  .home .home__section .home__support .home__support--left p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
 .home .home__section .home__support .home__support--right {
   width: 360px;
+}
+@media (max-width: 575px) {
+  .home .home__section .home__support .home__support--right {
+    width: 100%;
+  }
 }
 .home .home__section .home__support .home__support--right .support__form {
   margin-bottom: 16px;
@@ -220,13 +261,18 @@
   font-size: 18px;
 }
 .home .home__banner {
-  background-image: url(../image/banner.png);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center center;
+  background-image: url(../image/banner-mobile.jpg);
   background-size: 100% 100%;
-  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
   height: 500px;
+}
+@media (min-width: 474px) {
+  .home .home__banner {
+    background-image: url(../image/banner.png);
+    background-attachment: fixed;
+    position: relative;
+  }
 }
 
 .products-page {
@@ -2674,7 +2720,7 @@ input[type=text], input[type=password], input[type=number] {
   border: 1px solid var(--neutral-100);
   width: 100%;
   height: 48px;
-  padding-left: 24px;
+  padding-left: 16px;
   border-radius: 4px;
   font-size: 16px;
 }
@@ -2701,6 +2747,11 @@ input, select {
   gap: 30px;
   flex-wrap: wrap;
 }
+@media (max-width: 991px) {
+  .list__cards {
+    gap: 16px;
+  }
+}
 @media (max-width: 767px) {
   .list__cards {
     gap: 8px;
@@ -2712,7 +2763,7 @@ input, select {
 }
 @media (max-width: 991px) {
   .list__cards .card {
-    width: calc((100% - 30px) / 2);
+    width: calc((100% - 16px) / 2);
   }
 }
 @media (max-width: 767px) {
@@ -2723,6 +2774,44 @@ input, select {
 .list__cards .card:hover .card__name {
   color: var(--secondary-500);
 }
+@media (max-width: 991px) {
+  .list__cards .card.card__blog .card__bg.card__bg--blog {
+    padding-top: 8px;
+  }
+  .list__cards .card.card__blog .card__bg.card__bg--blog .card__info {
+    margin-bottom: 8px;
+  }
+  .list__cards .card.card__blog .card__bg.card__bg--blog .card__name.title {
+    font-size: 18px;
+    display: block;
+  }
+  .list__cards .card.card__blog .card__bg.card__bg--blog .card__text.mt-10 {
+    margin-top: 8px;
+  }
+}
+@media (max-width: 575px) {
+  .list__cards .card.card__blog {
+    width: 100%;
+    padding-bottom: 16px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid var(--neutral-100);
+    border-radius: 0;
+  }
+  .list__cards .card.card__blog:last-child {
+    margin-bottom: 0;
+    border: none;
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 575px) {
+  .list__cards .card.feedback {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .list__cards .card.feedback:last-child {
+    margin-bottom: 0;
+  }
+}
 .list__cards .card.feedback:hover .card__name {
   color: var(--text);
 }
@@ -2730,6 +2819,17 @@ input, select {
   border: 1px solid var(--neutral-100);
   border-top: transparent;
   border-radius: 0 0 6px 6px;
+}
+@media (max-width: 991px) {
+  .list__cards .card.feedback .card__bg {
+    padding: 8px;
+  }
+}
+@media (max-width: 991px) {
+  .list__cards .card.feedback .card__bg .card__text {
+    font-size: 16px;
+    min-height: unset;
+  }
 }
 .list__cards .card.feedback .card__img {
   border-radius: 6px 6px 0 0;
@@ -2797,6 +2897,7 @@ input, select {
   .list__cards .card .card__img .card__img--sale {
     padding: 4px 12px;
     font-size: 10px;
+    top: 10px;
   }
 }
 .list__cards .card .card__img img {
