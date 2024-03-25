@@ -2641,7 +2641,7 @@ img {
 .pt-90 {
   padding-top: 90px;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .pt-90 {
     padding-top: 30px;
   }
@@ -2650,7 +2650,7 @@ img {
 .pb-90 {
   padding-bottom: 90px;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .pb-90 {
     padding-bottom: 30px;
   }
@@ -2783,7 +2783,11 @@ input, select {
   }
   .list__cards .card.card__blog .card__bg.card__bg--blog .card__name.title {
     font-size: 18px;
-    display: block;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    min-height: 54px;
   }
   .list__cards .card.card__blog .card__bg.card__bg--blog .card__text.mt-10 {
     margin-top: 8px;
@@ -2824,6 +2828,12 @@ input, select {
   .list__cards .card.feedback .card__bg {
     padding: 8px;
   }
+}
+.list__cards .card.feedback .card__bg .card__text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 @media (max-width: 991px) {
   .list__cards .card.feedback .card__bg .card__text {
